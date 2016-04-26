@@ -137,6 +137,9 @@
 % Generate the glossary
 \makeglossaries
 
+\usepackage[dutch]{babel}
+\selectlanguage{dutch}
+
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
