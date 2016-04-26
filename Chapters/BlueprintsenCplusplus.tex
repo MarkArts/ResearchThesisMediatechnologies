@@ -35,7 +35,7 @@ Om het verschil tussen asynchrone logica in C++ en blueprints duidelijk te maken
 \subsubsection{C++}
 We registeren eerst een functie die aangesproken kan worden door de timeout en het geluid wat afgespeeld word in de header van de character.
 
-\begin{lstlisting}	
+\begin{lstlisting}[caption=Registratie van de timeout functie en het geluid]	
 /** Plays a sound x seconds after the death of the player*/
 void AfterDeathSoundTimeOut();
 
@@ -46,7 +46,7 @@ class USoundBase* DeathSound;
 
 Vervolgens word deze functie geïmplementeerd in de character.cpp
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Registratie van de timeout functie en het geluid]
 void Adpi_unreal_colosseumCharacter::AfterDeathSoundTimeOut() 
 {
 	UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
@@ -55,7 +55,7 @@ void Adpi_unreal_colosseumCharacter::AfterDeathSoundTimeOut()
 
 En word de timeout voor het geluid gezet tijdens het doodgaan van de speler.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Implementatie van de OnDeath functie]
 void Adpi_unreal_colosseumCharacter::OnDeath(const FDeathReason Reason)
 {
 	// death logic
@@ -76,7 +76,11 @@ We zien hier dat de gerelateerde code op drie verschillende plekken komt te staa
 \subsubsection{Blueprints}
 In Blueprints zou deze logica er als volgt uit zien:
 
-\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{OnDestroyedSoundDelay}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{OnDestroyedSoundDelay}
+    \caption{Afspelen van een geluid na het doodgaan van de speler in Blueprints.}
+\end{figure}
 
 In de blueprint implementatie is het in een oog opslag duidelijk dat er een geluid afgespeeld word op de locatie van de speler een seconde nadat deze deze dood gaat. De logica bevind zich op de dezelfde plek en de witte lijnen geven de flow van de logica aan. 
 
@@ -113,7 +117,7 @@ LookEventsComponent[zie hoofstuk ?] in c++ en blueprints met elkaar vergelijken.
 
 Zijn beide varianten moeilijk te lezen. Voor iemand die niet codeert ziet de Blueprints variant er waarschijnlijk begrijpgaarder uit maar de complexiteit komt voornamelijk door de logica zelf en in tekstuele code zijn er een aantal manieren om dit soort constructies kleiner te maken zoals:
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Early return in een complexere if statement in c++]
 if (bActive != true || (bShouldUsedOnce && TimesUsed > 0) || bIsInTimeOut == true) 
 {
 	return;
@@ -121,11 +125,15 @@ if (bActive != true || (bShouldUsedOnce && TimesUsed > 0) || bIsInTimeOut == tru
 \end{lstlisting}
 In vergelijking met 
 
-\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{EarlyReturnBluePrint}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{EarlyReturnBluePrint}
+    \caption{Early return in een complexere if statement in Blueprints.}
+\end{figure}
 
 Een ander voorbeeld is de volgende functie die bepaald of de trigger van een LookEventsComponent onderdeel was van een trace.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Een functie die kijkt of de huidige component geraakt is door een trace]
 FHitResult ULookEventsComponent::WasHitByTrace(const TArray<FHitResult> HitResults) 
 {
 	UObject* Trigger = (bIsBeingWatched) ? UnSeenTrigger : SeenTrigger;
@@ -148,7 +156,11 @@ FHitResult ULookEventsComponent::WasHitByTrace(const TArray<FHitResult> HitResul
 
 In vergelijking met:
 
-\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{WasHitBytTraceBluePrintExample}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{WasHitBytTraceBluePrintExample}
+    \caption{Een Blueprint die kijkt of de huidige component geraakt is door een trace.}
+\end{figure}
 
 Voor complexe conditionele logica is c++ sneller te begrijpen en geeft meer mogelijkheden om dit te versimpelen. 
 
@@ -187,22 +199,24 @@ Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag 
 
 Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en wanneer word er voor de volgende workflow gekozen.
     
-\begin{center}
-	\begin{tikzpicture}
-		[node distance=.8cm,
-		start chain=going below,]
-			\node[punktchain, join] (Experimenteren) 	
-				{Experimenteren (Blueprints)};
-			\node[punktchain, join] (hoe)      			
-				{Implementatie hoe (C++)};
-			\node[punktchain, join] (wat)    			
-				{Implementatie complexe wat (C++)};
-			\node[punktchain, join] (overerving) 		
-				{Blueprints overerving (Blueprints)};
-			\node[punktchain, join] (wanneer) 			
-				{Wanner en wat (Blueprints)};
-	\end{tikzpicture}
-\end{center}
+\begin{figure}
+	\centering
+		\begin{tikzpicture}
+			[node distance=.8cm,
+			start chain=going below,]
+				\node[punktchain, join] (Experimenteren) 	
+					{Experimenteren (Blueprints)};
+				\node[punktchain, join] (hoe)      			
+					{Implementatie hoe (C++)};
+				\node[punktchain, join] (wat)    			
+					{Implementatie complexe wat (C++)};
+				\node[punktchain, join] (overerving) 		
+					{Blueprints overerving (Blueprints)};
+				\node[punktchain, join] (wanneer) 			
+					{Wanner en wat (Blueprints)};
+		\end{tikzpicture}
+		\caption{Workflow voor het programmeren voor de Unreal Engine 4.}
+\end{figure}
 
 Elk component zal beginnen als een imperfecte Blueprint logica. In dit stadium is de performance en onderhoud niet belangrijk, en hoeft het niet eens compleet functioneel te zijn. Er kan direct ge-experimenteert en getest worden. Dit kan niet alleen waardevolle informatie opleveren voor het design aspect van een project maar plaats de logica ook in de context van het project. Vaak komt hier gewenste functionaliteit uit die tijdens het bedenken over het hoofd gekeken is.
 

@@ -6,7 +6,11 @@ In dit hoofdstuk word een introductie gegeven van een visuele programmeer taal. 
 
 \gls{vr} maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. 
 
-\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{VisualScriptingExample}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{VisualScriptingExample}
+    \caption{Voorbeeld van een visuele script taal.}
+\end{figure}
 
 Daarnaast word de mogelijkheden van de visuele programmeer taal ook vaak gelimiteerd om het de gebruiker makkelijker te maken en het programma te beschermen van de gebruiker. Meestal als de limitaties van \gls{vs} een probleem worden had de logica beter in een tekstuele taal geschreven kunnen worden.
 
@@ -33,12 +37,12 @@ Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld late
 
 \subsubsection{Tekstuele Implementatie}
 In een c++ header bestand registreren wij de volgende functie in onze speler classe.
-\begin{lstlisting}
+\begin{lstlisting}[caption=Registratie van de OnFire functie]
 void OnFire();
 \end{lstlisting}
 Dan tijdens het opzetten van de input voor ons karakter laten we weten wanneer we een projectiel willen schieten.
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Koppellen van de Fire actie aan de OndFire functie]
 if( EnableTouchscreenMovement(InputComponent) == false )
 {
 	InputComponent->BindAction(
@@ -51,7 +55,7 @@ if( EnableTouchscreenMovement(InputComponent) == false )
 \end{lstlisting}
 Maar omdat de “fire” actie niet werkt op een touch interface moeten we de onfire zelf afvuren als iemand het scherm aanraakt (De logica achter het registeren van touch events word niet getoond maar is wel aanwezig in de speler klasse).
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Aanroepen van de OnFire functie tijdens het EndTouch event]
 void Adpi_unreal_colosseumCharacter::EndTouch(const ETouchIndex::Type FingerIndex, const FVector Location)
 {
 	if (TouchItem.bIsPressed == false)
@@ -67,7 +71,7 @@ void Adpi_unreal_colosseumCharacter::EndTouch(const ETouchIndex::Type FingerInde
 \end{lstlisting}
 Vervolgens definiëren we OnFire als volgt
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Implementatie van de OnFire functie]
 void Adpi_unreal_colosseumCharacter::OnFire()
 { 
 	// try and fire a projectile
@@ -97,6 +101,10 @@ De “Hoe moet dit gebeuren” is een complexe vraag die prima beantwoord word i
 
 Maar de “Wanneer” vraag is makkelijk te beantwoorden. Namelijk als de fire actie uitgevoerd word of als er op het scherm gedrukt word. De logica in blueprints ziet er als volgt uit (in de event graph van een playerCharacter).
 
-\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{OnFireBlueprintCall}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{OnFireBlueprintCall}
+    \caption{Afvuren van een projectiel in Blueprints.}
+\end{figure}
 
 In tegenstelling tot de c++ code is de logica van de “Wanneer” vraag dit maal niet verspreid en is het in een oog opslag duidelijk wat er voor zorgt dat er een projectiel geschoten word.
