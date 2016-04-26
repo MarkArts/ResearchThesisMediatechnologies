@@ -133,6 +133,9 @@
   tuborg/.style={decorate},
   tubnode/.style={midway, right=2pt},
 }
+\usepackage[acronym,nomain]{glossaries}
+% Generate the glossary
+\makeglossaries
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -423,5 +426,6 @@
   \btypeout{\bibname}
   \@mainmatterfalse}
 \endinput
+
 %%
 %% End of file `Thesis.cls'.

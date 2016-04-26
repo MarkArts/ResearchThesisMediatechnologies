@@ -1,0 +1,120 @@
+\ifglsentryexists{hro}{}%
+{%
+\gls@defglossaryentry{hro}%
+{%
+name={HRO},%
+sort={HRO},%
+type={acronym},%
+first={Hogeschool Rotterdam\glsspace (HRO)},%
+firstplural={Hogeschool Rotterdams\glsspace (HROs)},%
+text={HRO},%
+plural={HROs},%
+description={Hogeschool Rotterdam},%
+descriptionplural={Hogeschool Rotterdam\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hogeschool Rotterdam},%
+longplural={Hogeschool Rotterdams},%
+short={HRO},%
+shortplural={HROs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{vr}{}%
+{%
+\gls@defglossaryentry{vr}%
+{%
+name={VR},%
+sort={VR},%
+type={acronym},%
+first={Virtual Reality\glsspace (VR)},%
+firstplural={Virtual Realitys\glsspace (VRs)},%
+text={VR},%
+plural={VRs},%
+description={Virtual Reality},%
+descriptionplural={Virtual Reality\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Reality},%
+longplural={Virtual Realitys},%
+short={VR},%
+shortplural={VRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{vs}{}%
+{%
+\gls@defglossaryentry{vs}%
+{%
+name={VS},%
+sort={VS},%
+type={acronym},%
+first={Visual Scripting\glsspace (VS)},%
+firstplural={Visual Scriptings\glsspace (VSs)},%
+text={VS},%
+plural={VSs},%
+description={Visual Scripting},%
+descriptionplural={Visual Scripting\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Visual Scripting},%
+longplural={Visual Scriptings},%
+short={VS},%
+shortplural={VSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ue4}{}%
+{%
+\gls@defglossaryentry{ue4}%
+{%
+name={UE4},%
+sort={UE4},%
+type={acronym},%
+first={Unreal Engine 4\glsspace (UE4)},%
+firstplural={Unreal Engine 4s\glsspace (UE4s)},%
+text={UE4},%
+plural={UE4s},%
+description={Unreal Engine 4},%
+descriptionplural={Unreal Engine 4\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unreal Engine 4},%
+longplural={Unreal Engine 4s},%
+short={UE4},%
+shortplural={UE4s},%
+counter={page},%
+parent={},%
+%
+}%
+}%

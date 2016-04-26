@@ -1,0 +1,972 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"color"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padding-",
+				"padding-top"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"bor",
+				"border-bottom-style"
+			],
+			[
+				"bord",
+				"border-style"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"backg",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Thesis.tex",
+			"settings":
+			{
+				"buffer_size": 7747,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 4 files for \"Visual Scripting\"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\VisualScripting.tex:\n    2  \\lstset {language=C++}\n    3  \n    4: \\chapter{Visual Scripting}\n    5  In dit hoofdstuk word een introductie gegeven van een visuele programmeer taal. Daarna word er als voorbeeld een vergelijking gemaakt tussen C++ en een visuele taal.\n    6  \n    7: Visual Scripting (VS) maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. \n    8  \n    9  \\includegraphics{VisualScriptingExample}\n\n2 matches in 1 file\n\n\nSearching 4 files for \"Unreal Engine 4\"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\BlueprintsenCplusplus.tex:\n  164  Naast een kleine verbetering in leesbaarheid heeft het schrijven van logica in c++ een ander belangrijke voordelen. Namelijk de voordelen van een code editor. Dit geeft uitgebreide debug, zoek en meta informatie. \n  165  \n  166: De error’s die de Unreal Engine 4 voor je genereed zijn niet altijd even duidelijk, voornamelijk error’s die pas tijdens het packagen van een project ontstaan, en het vinden van een foutieve Blueprint kan extreem lastig zijn. Bijna elk element in de Unreal Engine 4 kan Blueprints code bevatten. En elk element op zich kan die Blueprints weer in kleinere elementen verdelen. Deze elementen bevinden zich tussen alle andere soorten assets zoals Meshes, Animaties, Deciscion Trees, Materials, Textures etc en het zoeken van een onbekende fout hierin is extreem lastig.\n  167  \n  168  Als de foutieve code in c++ had gestaan kan er altijd door middel van een stack trace gekeken worden in welke functie het fout gaat en kan er gezien worden welke functie die functie aansprak en verder omhoog. \n  169  \n  170: Het auto aan vullen van functie namen en informatie tonen over functies door middel van de JavaDoc opmerking notatie versimpelt het schrijven van complexe code die gebruikt maakt van de Unreal Engine 4. \n  171  \n  172  \\subsubsection{Performance}\n  ...\n  216  Versie controle is een belangrijk onderdeel van elk ICT project en al valt dit buiten de scope van deze scriptie word er hier een korte vermelding van gemaakt.\n  217  \n  218: Versie controle is een belangrijk onderdeel in samen werken aan code en speelt een belangrijke rol in het onderhoud van code. Er zijn tools in Unreal Engine 4 om versie controle tools zoals git en svn op Blueprints, en assets, toe te passen. Voor deze scriptie is de plugin ontwikkeld met behulp van git maar is er niet gekeken naar een manier waarop niet-programmeurs hier ook mee kunnen werken.\n  219  \n  220: Tijdens de interviews[?] werd het duidelijk dat er geen bestaande kennis van versie controle aanwezig was in de visuele teams van DPI. Het kiezen, opzetten en leren van versie controle en de integratie hiervan met de Unreal Engine 4 valt buiten de scope van deze scriptie.\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\Inleiding.tex:\n    2  \\chapter{Inleiding}\n    3  \n    4: In een periode van 18 weken zal ik proberen een reeks van basis componenten voor de Unreal Engine 4 te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \\gls{vr} demo’s kunnen toevoegen.\n    5  \n    6  De Unreal Engine zal gebruikt worden omdat deze een uitgebreid VS systeem heeft die het makkelijk maakt om simpele logica, zoals wanneer en waar iets moet plaats vinden, makkelijk uit te drukke. Het VS systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Naast een efficiëntere workflow maakt dit het ook makkelijk om als designer, 3D artist te experimenteren.\n    .\n   14  \\section{Doelstelling}\n   15  \n   16: Het creëren van een reeks basis componenten voor Unreal Engine 4 waarmee niet programmeurs interactieve \\gls{vr} demo’s kunnen maken die toegevoegde waarde hebben aan de workflow van DPI.\n   17  \n   18  Aan het eind van dit traject zal het mogelijk zijn om met de gemaakte componenten een bestaande omgeving zonder programmeren geschikt te maken voor VR en om een nieuwe omgeving op te zetten zonder behulp van een programmeur.\n   ..\n   22  \\subsection{Hoofdvraag}\n   23  \n   24: Hoe realiseren we een ontwikkel omgeving waarin niet-programmeurs, zoals 3D artists en level designers, efficiënt unieke \\gls{vr} ervaring kunnen creëren in Unreal Engine 4.\n   25  \n   26  \\subsection{Deelvragen}\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\UnrealEngine4.tex:\n    1  %!TEX root = ../Thesis.tex\n    2: \\chapter{Unreal Engine 4}\n    3  \n    4  \\section{Waarom de Unreal Engine}\n    .\n   15  \\item Unity\n   16  \\item CRYENGINE\n   17: \\item Unreal Engine 4\n   18  \\end{itemize}\n   19  \n   ..\n   30  \n   31  \\subsubsection{Gebruiks gemak}\n   32: Op gebruiksgemak, in serieuze projecten, fidelity en performance loopt Unity ver achter op de Unreal Engine 4 en CryEngine. Onderhoudbaar en uitbreidbaarheid van Unity is meestal rampzalig door de manier waarop code voor Unity geschreven word. Vaak is Unity daarom ook niet de keuze voor grote games van hoge kwaliteit. \n   33  \n   34  Het programmeren word namelijk in een component style in c-sharp gedaan. Het programmeren in c-sharp is voor veel mensen fijn omdat dit vaak een bekende taal is. Maar het component systeem en de manier waarop Unity relatie’s afhandelt zorgt dat er extreem snel spaghetti code ontstaat. \n   ..\n   49  Door het gebrek aan persoonlijke ervaring kan ik hier minder over zeggen. Maar door het gebrek aan Gear VR ondersteuning is er hier niet meer in verdiept.\n   50  \n   51: \\subsection{Unreal Engine 4}\n   52  \\subsubsection{Licentie}\n   53: Het gebruik van de Unreal Engine 4 is compleet gratis voor educatie en niet-game applicaties zoals architectuur, visualisatie, films etc. Dit betekend dat zowel tijdens het afstuderen als mogelijke vervolg projecten van DPI er geen licentie kosten betaald hoeven te worden.\n   54  \n   55  \\subsubsection{Oculus en Gear VR ondersteuning}\n   56: Unreal Engine 4 ondersteund zowel de Oculus als Gear VR. Daarnaast ondersteund het ook de meeste randapparatuur voor VR zoals Leap Motion en Kinect. Updates hiervoor komen vaak wel later dan voor Unity.\n   57  VS\n   58: Unreal heeft een uitgebreid VS systeem wat nauw samenwerkt met c++. Alle functies die in c++ beschikbaar zijn zijn beschikbaar via Blueprints. Van elke Blueprint kan ook direct de source code ingesprongen worden, zelfs voor de functies uit de Unreal Engine 4 libraries.\n   59  \n   60  Het koppelen van c++ aan blueprints is vrij simpel en ondersteund ook het creeën van events in c++ en functionaliteit hieraan via blueprints te kopellen.\n   61  \n   62  \\subsubsection{Gebruiks gemak}\n   63: De leer curve van Unreal Engine is redelijk stijl maar binnen een paar weken is het mogelijk de belangrijkste te leren. Een punt om rekening mee te houden is dat het zomaar iets maken in de Unreal Engine 4 vaak verkeerd uitpakt. Daarom is het belangrijk de documentatie, van het onderdeel waar je mee bezig bent, goed te lezen.\n   64  \n   65  Als de basis principes eenmaal onder de knie zijn kan er extreem snel ontwikkeld, en geprototyped, worden met de unreal engine door de implementatie van VS en een strakke en goed uitgedachte UI.\n   66  \n   67  \\subsubsection{Conclusie}\n   68: De CRYENGINE valt af vanwege zijn gebrek aan Gear VR support. Dan blijft de keuze over tussen Unity en Unreal Engine 4. Untiy heeft een minder style learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. \n   69  \n   70: Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen beid het visuele scripting systeem van Unreal Engine 4 wel deze mogelijkheden.\n   71  \n   72  \\section{Blueprints}\n   73: Blueprints is het visuele scripting systeem van Unreal Engine 4 en wat deze scriptie mogelijk maakt. De beschrijving van Unreal zelf is als volgt:\n   74  \n   75  “Blueprints are special assets that provide an intuitive, node-based interface that can be used to create new types of Actors and script level events; giving designers and gameplay programmers the tools to quickly create and iterate gameplay from within Unreal Editor without ever needing to write a line of code.”\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\VisualScripting.tex:\n   30  \n   31  \\subsection{Het afvuren van een projectiel}\n   32: Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld laten wij de logica zien van het schieten van een projectiel in c++ gebaseerd op het standaard voorbeeld van een speler uit de Unreal Engine 4.\n   33  \n   34  \\subsubsection{Tekstuele Implementatie}\n\n20 matches across 4 files\n\n\nSearching 4 files for \"Unreal Engine\"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\Inleiding.tex:\n    4  In een periode van 18 weken zal ik proberen een reeks van basis componenten voor de \\gls{ue4} te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \\gls{vr} demo’s kunnen toevoegen.\n    5  \n    6: De Unreal Engine zal gebruikt worden omdat deze een uitgebreid VS systeem heeft die het makkelijk maakt om simpele logica, zoals wanneer en waar iets moet plaats vinden, makkelijk uit te drukke. Het VS systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Naast een efficiëntere workflow maakt dit het ook makkelijk om als designer, 3D artist te experimenteren.\n    7  \n    8  \\section{Probleemstelling}\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\UnrealEngine4.tex:\n    2  \\chapter{\\gls{ue4}}\n    3  \n    4: \\section{Waarom de Unreal Engine}\n    5  \n    6  Tijdens het kiezen van een Engine waren er drie rand voorwaarden namelijk \n    .\n   61  \n   62  \\subsubsection{Gebruiks gemak}\n   63: De leer curve van Unreal Engine is redelijk stijl maar binnen een paar weken is het mogelijk de belangrijkste te leren. Een punt om rekening mee te houden is dat het zomaar iets maken in de \\gls{ue4} vaak verkeerd uitpakt. Daarom is het belangrijk de documentatie, van het onderdeel waar je mee bezig bent, goed te lezen.\n   64  \n   65: Als de basis principes eenmaal onder de knie zijn kan er extreem snel ontwikkeld, en geprototyped, worden met de unreal engine door de implementatie van VS en een strakke en goed uitgedachte UI.\n   66  \n   67  \\subsubsection{Conclusie}\n\n4 matches across 2 files\n\n\nSearching 38 files for \"Hogeschool\"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Thesis.cls:\n  200  \\degree      {}\n  201  \\authors     {}\n  202: \\university  {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl}\n  203:                 {Hogeschool Rotterdam}}\n  204:                 {Hogeschool Rotterdam}}\n  205: \\UNIVERSITY  {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl}\n  206:                 {HOGESCHOOL ROTTERDAM}}\n  207:                 {HOGESCHOOL ROTTERDAM}}\n  208: \\department  {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl/bedrijven/sectoren/instituut-voor-communicatie-media-en-informatietechnologie}\n  209                  {Instituut voor Communicatie Media en Informatietechnologie}}\n  210                  {Instituut voor Communicatie Media en Informatietechnologie}}\n  211: \\DEPARTMENT  {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl/bedrijven/sectoren/instituut-voor-communicatie-media-en-informatietechnologie}\n  212                  {INSTITUUT VOOR COMMUNICATIE MEDIA EN INFORMATIETECHNOLOGIE}}\n  213                  {INSTITUUT VOOR COMMUNICATIE MEDIA EN INFORMATIETECHNOLOGIE}}\n  ...\n  218                  {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}\n  219                  {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}\n  220: \\faculty     {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl/opleidingen/bachelor/creative-media-and-game-technologies/}\n  221                  {Mediatechnologie}}\n  222                  {Mediatechnologie}}\n  223: \\FACULTY     {\\texorpdfstring{\\href{https://www.hogeschoolrotterdam.nl/opleidingen/bachelor/creative-media-and-game-technologies/}\n  224                  {MEDIATECHNOLOGIE}}\n  225                  {MEDIATECHNOLOGIE}}\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Thesis.glsdefs:\n    6  sort={HRO},%\n    7  type={acronym},%\n    8: first={Hogeschool Rotterdam\\glsspace (HRO)},%\n    9: firstplural={Hogeschool Rotterdams\\glsspace (HROs)},%\n   10  text={HRO},%\n   11  plural={HROs},%\n   12: description={Hogeschool Rotterdam},%\n   13: descriptionplural={Hogeschool Rotterdam\\acrpluralsuffix },%\n   14  symbol={\\relax },%\n   15  symbolplural={\\relax },%\n   ..\n   20  user5={},%\n   21  user6={},%\n   22: long={Hogeschool Rotterdam},%\n   23: longplural={Hogeschool Rotterdams},%\n   24  short={HRO},%\n   25  shortplural={HROs},%\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Thesis.tex:\n  107   \n  108  % Acronym definitions\n  109: \\newacronym{hro}{HRO}{Hogeschool Rotterdam}\n  110  \\newacronym{vr}{VR}{Virtual Reality}\n  111  \\newacronym{vs}{VS}{Visual Scripting}\n\n17 matches across 3 files\n\n\nSearching 4 files for \"VR\"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\BlueprintsenCplusplus.tex:\n   18  \\section{Gameplay}\n   19  \n   20: Om de scheiding tussen c++ en Blueprints concreet te maken verdelen wij gameplay logica in de volgende vragen:\n   21  \n   22  \\begin{itemize}\n   ..\n   29  \n   30  \\subsection{Wanneer}\n   31: De wanneer vragen zijn vaak makkelijk te beantwoorden, bijvoorbeeld als de speler geraakt word door een projectiel wil ik dat geluid x afgespeeld word, maar moeilijk te coderen door hun asynchrone natuur. Een van de krachtigste voordelen van een Visuele programmeer taal is dat de flow van een programma uitgedrukt kan worden door middel van de lijnen tussen nodes. \n   32  \n   33  Om het verschil tussen asynchrone logica in C++ en blueprints duidelijk te maken implementeren wij hieronder het afspelen van een geluid nadat een speler dood gaat.\n   ..\n  154  \n  155  \\subsection{Hoe}\n  156: Met de hoe vraag word de interne werking van een functionaliteit bedoelt waaronder ook de integratie met de rest van het programma, denk aan integratie met de rest van de engine, lifecycles, overerving en performance.\n  157  \n  158  Complexe algoritmes zijn altijd makkelijker in C++ voor zowel leesbaarheid als onderhoudbaarheid. Daarnaast is de scheiding van algoritmes met de rest van de code belangrijk voor het scheiden van complexiteit.\n  ...\n  171  \n  172  \\subsubsection{Performance}\n  173: Een ander belangrijk onderdeel van de hoe logica is performance. De performance van Blueprints is namelijk lager dan dat van c++. In de hoe en wat vraag is dit verschil compleet onmerkbaar maar in code wat vaak, bijvoorbeeld in de loop van een game, word uitgevoerd kan het verschil merkbaar worden.\n  174  In c++ is er ook veel meer controle over de manier waarop de computer logica interpreteert, in Blueprints is dit een stuk minder duidelijk. Dit zorgt ervoor dat op een lager niveau optimalisaties mogelijk zijn. \n  175  \n  176: Daarnaast is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbaar manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces wat de LookEventsComponents nodig hebben is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt als deze trace dan al eerder door een andere LookEventsComponent berekend is krijg hij de resultaten van die trace inplaats van een nieuwe trace te maken.\n  177  \n  178  \\subsection{Conclusie}\n  179: Voor de wanneer vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat.\n  180  \n  181: Voor de hoe vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. \n  182  \n  183: Voor de wat vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. \n  184  \n  185  \\section{Workflow}\n  186: Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag mogelijk houden met zo veel mogelijk vrijheid. Daarnaast is flexibiliteit belangrijk voor het makkelijk en veilig experimenteren en itereren.\n  187  \n  188: Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en wanneer word er voor de volgende workflow gekozen.\n  189      \n  190  \\begin{center}\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\Inleiding.tex:\n    2  \\chapter{Inleiding}\n    3  \n    4: In een periode van 18 weken zal ik proberen een reeks van basis componenten voor de \\gls{ue4} te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \\gls{vr} demo’s kunnen toevoegen.\n    5  \n    6  De \\gls{ue4} zal gebruikt worden omdat deze een uitgebreid VS systeem heeft die het makkelijk maakt om simpele logica, zoals wanneer en waar iets moet plaats vinden, makkelijk uit te drukke. Het VS systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Naast een efficiëntere workflow maakt dit het ook makkelijk om als designer, 3D artist te experimenteren.\n    .\n    8  \\section{Probleemstelling}\n    9  \n   10: Momenteel is het toevoegen van interactieve elementen in \\gls{vr} een intensieve programmeer taak omdat het vaak ontwikkelt wordt voor een specifieke use case. Het is daardoor vaak lastig om de geprogrammeerde logica te hergebruiken in een ander project. \n   11  \n   12: Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. Vooral in gameontwikkeling zijn er veel sprongen gemaakt in het oplossen van dit probleem. Een van deze oplossingen is het gebruikt van “VS” om interactie in een spel te programmeren. Er zijn hier al veel sprongen in gemaakt maar het implementeren van VR gerelateerde componenten is nog niet standaard aanwezig.\n   13  \n   14  \\section{Doelstelling}\n   15  \n   16: Het creëren van een reeks basis componenten voor \\gls{ue4} waarmee niet programmeurs interactieve \\gls{vr} demo’s kunnen maken die toegevoegde waarde hebben aan de workflow van DPI.\n   17  \n   18: Aan het eind van dit traject zal het mogelijk zijn om met de gemaakte componenten een bestaande omgeving zonder programmeren geschikt te maken voor VR en om een nieuwe omgeving op te zetten zonder behulp van een programmeur.\n   19  \n   20: \\section{Onderzoeksvraag}\n   21  \n   22: \\subsection{Hoofdvraag}\n   23  \n   24: Hoe realiseren we een ontwikkel omgeving waarin niet-programmeurs, zoals 3D artists en level designers, efficiënt unieke \\gls{vr} ervaring kunnen creëren in \\gls{ue4}.\n   25  \n   26: \\subsection{Deelvragen}\n   27  \n   28  \\begin{itemize}  \n   ..\n   49  \\subsubsection{Hoe kan er een koppeling met VS gemaakt worden die intuïtief is voor niet programmeurs?}\n   50  \n   51: De hoeveelheid abstractie van de componenten zijn afhankelijk van de bestaande intuïtie voor programmeren. Als een gebruiker namelijk snapt hoe de “als dit dan dat” constructie werkt kan er meer vrijheid in de componenten gecreëerd worden.\n   52  \n   53: Als eerst zal er onderzocht moeten worden wat de huidige kennis is van de niet-programmeurs. Dit kan door middel van interviews en een aantal vragen.\n   54  \n   55  Vervolgens zal er onderzocht moeten worden wat een haalbaar moeilijkheidsgraad is en of er baat is van een extra training voor de niet-programmeurs.\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\UnrealEngine4.tex:\n    7  \\begin{enumerate}\n    8  	\\item gratis voor educatie, of goedkoop genoeg voor DPI om aan te schaffen\n    9: 	\\item Oculus en Gear VR ondersteuning\n   10: 	\\item Een VR systeem\n   11  \\end{enumerate}\n   12  \n   ..\n   23  Unity heeft een educatie licentie waaronder het grootste gedeelte van de engine gratis gebruikt kan worden maar rekening houdend met de interesses van DPI, en eventuele vervolg projecten die zei willen ondernemen, zal de licentie minimaal 75€ per maand worden met daar de koste van Android builds bij.\n   24  \n   25: \\subsubsection{Oculus en Gear VR ondersteuning}\n   26  Van de drie engine’s heeft unity de meest uitgebreide platform support. Daarnaast is Unity vaak een van de eerste keuze’s om nieuwe technieken mee te implementeren. De reden achter deze keuze is het gemak waarop plugins gemaakt kunnen worden en de voordelige / gratis pricing van Unity wat het een populaire keuze maakt voor experimenteren.\n   27  \n   ..\n   38  De CRYENGINE licentie bestaat uit een “Pay what you want” model. Daarnaast beid Crytek een “CRYENGINE Insider Membership“ aan voor 50€ of 150€. \n   39  \n   40: \\subsubsection{Oculus en Gear VR ondersteuning}\n   41: Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet de GearVR. Android ondersteuning is mogelijk maar niet officieel ondersteund door Crytek. Dit zal het lastig maken om Gear VR te ondersteunen.\n   42  \n   43  \\subsubsection{VS}\n   ..\n   47  De CryEngine staat bekend als een moeilijke Engine om in te beginnen maar heeft ondertussen bewezen een goede keuze te zijn voor game ontwikkelaars en grotere teams.\n   48  \n   49: Door het gebrek aan persoonlijke ervaring kan ik hier minder over zeggen. Maar door het gebrek aan Gear VR ondersteuning is er hier niet meer in verdiept.\n   50  \n   51  \\subsection{Unreal Engine 4}\n   ..\n   53  Het gebruik van de \\gls{ue4} is compleet gratis voor educatie en niet-game applicaties zoals architectuur, visualisatie, films etc. Dit betekend dat zowel tijdens het afstuderen als mogelijke vervolg projecten van DPI er geen licentie kosten betaald hoeven te worden.\n   54  \n   55: \\subsubsection{Oculus en Gear VR ondersteuning}\n   56: \\gls{ue4} ondersteund zowel de Oculus als Gear VR. Daarnaast ondersteund het ook de meeste randapparatuur voor VR zoals Leap Motion en Kinect. Updates hiervoor komen vaak wel later dan voor Unity.\n   57  VS\n   58  Unreal heeft een uitgebreid VS systeem wat nauw samenwerkt met c++. Alle functies die in c++ beschikbaar zijn zijn beschikbaar via Blueprints. Van elke Blueprint kan ook direct de source code ingesprongen worden, zelfs voor de functies uit de \\gls{ue4} libraries.\n   59  \n   60: Het koppelen van c++ aan blueprints is vrij simpel en ondersteund ook het creeën van events in c++ en functionaliteit hieraan via blueprints te kopellen.\n   61  \n   62  \\subsubsection{Gebruiks gemak}\n   ..\n   66  \n   67  \\subsubsection{Conclusie}\n   68: De CRYENGINE valt af vanwege zijn gebrek aan Gear VR support. Dan blijft de keuze over tussen Unity en \\gls{ue4}. Untiy heeft een minder style learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. \n   69  \n   70  Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen beid het visuele scripting systeem van \\gls{ue4} wel deze mogelijkheden.\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\VisualScripting.tex:\n    5  In dit hoofdstuk word een introductie gegeven van een visuele programmeer taal. Daarna word er als voorbeeld een vergelijking gemaakt tussen C++ en een visuele taal.\n    6  \n    7: \\gls{vr} maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. \n    8  \n    9  \\includegraphics{VisualScriptingExample}\n   ..\n   26  \n   27  \\section{Gameplay Logica}\n   28: Het programmeren van gameplay in een spel bestaat voor een groot gedeelte uit de vragen “Wanneer moet iets gebeuren”, “Wat moet er gebeuren” en “Hoe moet dit gebeuren”.\n   29: De vragen “Waarom moet iets gebeuren” en “Waar moet dit gebeuren” komen het meeste voor in de gameplay logica van een spel, vaak hebben deze vragen ook een makkelijk antwoord. Helaas zijn deze vragen lastig om te beantwoorden in tekstuele code.\n   30  \n   31  \\subsection{Het afvuren van een projectiel}\n   32: Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld laten wij de logica zien van het schieten van een projectiel in c++ gebaseerd op het standaard voorbeeld van een speler uit de \\gls{ue4}.\n   33  \n   34  \\subsubsection{Tekstuele Implementatie}\n   ..\n   94  \n   95  \\subsubsection{Visuele Implementatie}\n   96: De “Hoe moet dit gebeuren” is een complexe vraag die prima beantwoord word in code. Vooral omdat er verschillende logica achter elkaar plaatsvind, geluid afspelen / animatie starten, en een aantal wiskundige berekeningen. \n   97  \n   98: Maar de “Wanneer” vraag is makkelijk te beantwoorden. Namelijk als de fire actie uitgevoerd word of als er op het scherm gedrukt word. De logica in blueprints ziet er als volgt uit (in de event graph van een playerCharacter).\n   99  \n  100  \\includegraphics{OnFireBlueprintCall}\n  101  \n  102: In tegenstelling tot de c++ code is de logica van de “Wanneer” vraag dit maal niet verspreid en is het in een oog opslag duidelijk wat er voor zorgt dat er een projectiel geschoten word.\n\n42 matches across 4 files\n\n\nSearching 4 files for \" VR \"\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\Inleiding.tex:\n   10  Momenteel is het toevoegen van interactieve elementen in \\gls{vr} een intensieve programmeer taak omdat het vaak ontwikkelt wordt voor een specifieke use case. Het is daardoor vaak lastig om de geprogrammeerde logica te hergebruiken in een ander project. \n   11  \n   12: Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. Vooral in gameontwikkeling zijn er veel sprongen gemaakt in het oplossen van dit probleem. Een van deze oplossingen is het gebruikt van “VS” om interactie in een spel te programmeren. Er zijn hier al veel sprongen in gemaakt maar het implementeren van VR gerelateerde componenten is nog niet standaard aanwezig.\n   13  \n   14  \\section{Doelstelling}\n   ..\n   16  Het creëren van een reeks basis componenten voor \\gls{ue4} waarmee niet programmeurs interactieve \\gls{vr} demo’s kunnen maken die toegevoegde waarde hebben aan de workflow van DPI.\n   17  \n   18: Aan het eind van dit traject zal het mogelijk zijn om met de gemaakte componenten een bestaande omgeving zonder programmeren geschikt te maken voor VR en om een nieuwe omgeving op te zetten zonder behulp van een programmeur.\n   19  \n   20  \\section{Onderzoeksvraag}\n\nC:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters\\UnrealEngine4.tex:\n    7  \\begin{enumerate}\n    8  	\\item gratis voor educatie, of goedkoop genoeg voor DPI om aan te schaffen\n    9: 	\\item Oculus en Gear VR ondersteuning\n   10: 	\\item Een VR systeem\n   11  \\end{enumerate}\n   12  \n   ..\n   23  Unity heeft een educatie licentie waaronder het grootste gedeelte van de engine gratis gebruikt kan worden maar rekening houdend met de interesses van DPI, en eventuele vervolg projecten die zei willen ondernemen, zal de licentie minimaal 75€ per maand worden met daar de koste van Android builds bij.\n   24  \n   25: \\subsubsection{Oculus en Gear VR ondersteuning}\n   26  Van de drie engine’s heeft unity de meest uitgebreide platform support. Daarnaast is Unity vaak een van de eerste keuze’s om nieuwe technieken mee te implementeren. De reden achter deze keuze is het gemak waarop plugins gemaakt kunnen worden en de voordelige / gratis pricing van Unity wat het een populaire keuze maakt voor experimenteren.\n   27  \n   ..\n   38  De CRYENGINE licentie bestaat uit een “Pay what you want” model. Daarnaast beid Crytek een “CRYENGINE Insider Membership“ aan voor 50€ of 150€. \n   39  \n   40: \\subsubsection{Oculus en Gear VR ondersteuning}\n   41: Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet de GearVR. Android ondersteuning is mogelijk maar niet officieel ondersteund door Crytek. Dit zal het lastig maken om Gear VR te ondersteunen.\n   42  \n   43  \\subsubsection{VS}\n   ..\n   47  De CryEngine staat bekend als een moeilijke Engine om in te beginnen maar heeft ondertussen bewezen een goede keuze te zijn voor game ontwikkelaars en grotere teams.\n   48  \n   49: Door het gebrek aan persoonlijke ervaring kan ik hier minder over zeggen. Maar door het gebrek aan Gear VR ondersteuning is er hier niet meer in verdiept.\n   50  \n   51  \\subsection{Unreal Engine 4}\n   ..\n   53  Het gebruik van de \\gls{ue4} is compleet gratis voor educatie en niet-game applicaties zoals architectuur, visualisatie, films etc. Dit betekend dat zowel tijdens het afstuderen als mogelijke vervolg projecten van DPI er geen licentie kosten betaald hoeven te worden.\n   54  \n   55: \\subsubsection{Oculus en Gear VR ondersteuning}\n   56: \\gls{ue4} ondersteund zowel de Oculus als Gear VR. Daarnaast ondersteund het ook de meeste randapparatuur voor VR zoals Leap Motion en Kinect. Updates hiervoor komen vaak wel later dan voor Unity.\n   57  VS\n   58  Unreal heeft een uitgebreid VS systeem wat nauw samenwerkt met c++. Alle functies die in c++ beschikbaar zijn zijn beschikbaar via Blueprints. Van elke Blueprint kan ook direct de source code ingesprongen worden, zelfs voor de functies uit de \\gls{ue4} libraries.\n   ..\n   66  \n   67  \\subsubsection{Conclusie}\n   68: De CRYENGINE valt af vanwege zijn gebrek aan Gear VR support. Dan blijft de keuze over tussen Unity en \\gls{ue4}. Untiy heeft een minder style learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. \n   69  \n   70  Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen beid het visuele scripting systeem van \\gls{ue4} wel deze mogelijkheden.\n\n11 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 30452,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Chapters/BlueprintsenCplusplus.tex",
+			"settings":
+			{
+				"buffer_size": 12825,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Chapters/Inleiding.tex",
+			"settings":
+			{
+				"buffer_size": 4844,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Chapters/UnrealEngine4.tex",
+			"settings":
+			{
+				"buffer_size": 6118,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Chapters/VisualScripting.tex",
+			"settings":
+			{
+				"buffer_size": 4849,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "installk",
+		"selected_items":
+		[
+			[
+				"installk",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"i nd",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Appendices",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Chapters",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Figures"
+	],
+	"file_history":
+	[
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Appendices/ConditionalLogicVanTickFunctieVnLookEventIinCplusplus.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.acn",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.blg",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Appendices/OrientatieIntervieuw.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Chapters/Inleiding.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Appendices/ConditionalLogicVanTickFunctieVanLookEvents.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Chapters/BlueprintsenCplusplus.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.cls",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.synctex.gz",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Chapters/VisualScripting.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Appendices/dpi_unreal_colosseumCharacter.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Chapters/UnrealEngine4.tex",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/Thesis.bbl",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Thesis.tex",
+		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/LaTeX.sublime-settings",
+		"/C/Users/Mark/Documents/LaTeX/ResearchThesisMediatechnologies/TeX reports the error was in file",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Thesis.synctex.gz",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Chapters/VisualScripting.tex",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Chapters/Inleiding.tex",
+		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Thesis.bbl",
+		"/C/Users/Mark/Documents/LaTeX/graduate-thesis/Thesis.cls",
+		"/C/Users/Mark/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters",
+			"C:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies",
+			"C:\\Users\\Mark\\Documents\\LaTeX\\ResearchThesisMediatechnologies\\Chapters",
+			"C:\\Users\\Mark\\Documents\\LaTeX\\graduate-thesis",
+			"C:\\Users\\Mark\\Documents\\LaTeX\\graduate-thesis\\Chapters",
+			"C:\\Users\\Mark\\Documents\\LaTeX\\graduate-thesis",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"visu",
+			"visuele",
+			"virtua",
+			"Virtual",
+			"VS",
+			"virtual sc",
+			" VS ",
+			"VS",
+			"Vs",
+			"VS",
+			"vs",
+			"VR",
+			"vs",
+			"visual scri",
+			"gls",
+			" VR ",
+			"VR",
+			"Hogeschool",
+			"hogeschoo",
+			"Unreal Engine",
+			"Unreal Engine 4",
+			"Visual Scripting",
+			"Virtual Reality",
+			"acron",
+			"{hide}",
+			"Bibliography",
+			"latin",
+			"sha",
+			"define",
+			"tix",
+			"wat",
+			"wat|",
+			"wat",
+			"visueel scripting",
+			"visueele scripting",
+			"visual scripting",
+			"visualk scripting",
+			"visua scripting",
+			"script",
+			"Visual Scripting",
+			"figures",
+			"figur",
+			"figures",
+			"color",
+			"listings",
+			"thebibliography",
+			"graph",
+			"graphix",
+			"graphi",
+			"image",
+			"chapter",
+			"texpath",
+			"text",
+			"textlive",
+			"texpath",
+			"text",
+			"chapter",
+			"sumatr",
+			"hei",
+			"im",
+			"img",
+			"font-",
+			"px",
+			"center",
+			"50"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\gls{vr}",
+			"\\gls{ue4}",
+			"\\gls{vr}",
+			"VS"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Thesis.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5416,
+								5418
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1530.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30452,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										188,
+										204
+									],
+									[
+										394,
+										410
+									],
+									[
+										1202,
+										1217
+									],
+									[
+										1434,
+										1449
+									],
+									[
+										2177,
+										2192
+									],
+									[
+										2569,
+										2584
+									],
+									[
+										3055,
+										3070
+									],
+									[
+										3324,
+										3339
+									],
+									[
+										3997,
+										4012
+									],
+									[
+										4585,
+										4600
+									],
+									[
+										4782,
+										4797
+									],
+									[
+										4909,
+										4924
+									],
+									[
+										5107,
+										5122
+									],
+									[
+										5831,
+										5846
+									],
+									[
+										5906,
+										5921
+									],
+									[
+										6231,
+										6246
+									],
+									[
+										6694,
+										6709
+									],
+									[
+										7133,
+										7148
+									],
+									[
+										7632,
+										7647
+									],
+									[
+										8015,
+										8030
+									],
+									[
+										8146,
+										8161
+									],
+									[
+										8937,
+										8952
+									],
+									[
+										9382,
+										9395
+									],
+									[
+										10015,
+										10028
+									],
+									[
+										10197,
+										10210
+									],
+									[
+										10629,
+										10642
+									],
+									[
+										10992,
+										11002
+									],
+									[
+										11040,
+										11050
+									],
+									[
+										11087,
+										11097
+									],
+									[
+										11165,
+										11175
+									],
+									[
+										11213,
+										11223
+									],
+									[
+										11260,
+										11270
+									],
+									[
+										11338,
+										11348
+									],
+									[
+										11665,
+										11675
+									],
+									[
+										12130,
+										12140
+									],
+									[
+										12354,
+										12364
+									],
+									[
+										12660,
+										12670
+									],
+									[
+										12719,
+										12729
+									],
+									[
+										12823,
+										12833
+									],
+									[
+										12873,
+										12883
+									],
+									[
+										13027,
+										13037
+									],
+									[
+										13070,
+										13080
+									],
+									[
+										13286,
+										13296
+									],
+									[
+										13696,
+										13698
+									],
+									[
+										13795,
+										13797
+									],
+									[
+										14387,
+										14389
+									],
+									[
+										15022,
+										15024
+									],
+									[
+										15729,
+										15731
+									],
+									[
+										15952,
+										15954
+									],
+									[
+										16185,
+										16187
+									],
+									[
+										16315,
+										16317
+									],
+									[
+										16661,
+										16663
+									],
+									[
+										16841,
+										16843
+									],
+									[
+										17239,
+										17241
+									],
+									[
+										17838,
+										17840
+									],
+									[
+										18406,
+										18408
+									],
+									[
+										18622,
+										18624
+									],
+									[
+										18864,
+										18866
+									],
+									[
+										18975,
+										18977
+									],
+									[
+										19014,
+										19016
+									],
+									[
+										19162,
+										19164
+									],
+									[
+										19235,
+										19237
+									],
+									[
+										19603,
+										19605
+									],
+									[
+										19805,
+										19807
+									],
+									[
+										20205,
+										20207
+									],
+									[
+										20240,
+										20242
+									],
+									[
+										20642,
+										20644
+									],
+									[
+										21219,
+										21221
+									],
+									[
+										21328,
+										21330
+									],
+									[
+										21444,
+										21446
+									],
+									[
+										21796,
+										21798
+									],
+									[
+										22217,
+										22219
+									],
+									[
+										22289,
+										22291
+									],
+									[
+										22353,
+										22355
+									],
+									[
+										22774,
+										22776
+									],
+									[
+										23039,
+										23041
+									],
+									[
+										23789,
+										23791
+									],
+									[
+										24298,
+										24300
+									],
+									[
+										24396,
+										24398
+									],
+									[
+										24534,
+										24536
+									],
+									[
+										24586,
+										24588
+									],
+									[
+										24732,
+										24734
+									],
+									[
+										25082,
+										25084
+									],
+									[
+										25295,
+										25297
+									],
+									[
+										25634,
+										25636
+									],
+									[
+										26539,
+										26543
+									],
+									[
+										26995,
+										26999
+									],
+									[
+										27341,
+										27345
+									],
+									[
+										27376,
+										27380
+									],
+									[
+										27778,
+										27782
+									],
+									[
+										28355,
+										28359
+									],
+									[
+										28580,
+										28584
+									],
+									[
+										28932,
+										28936
+									],
+									[
+										29353,
+										29357
+									],
+									[
+										29489,
+										29493
+									],
+									[
+										29960,
+										29964
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								25787,
+								25787
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 6,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Chapters/BlueprintsenCplusplus.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12315,
+								12315
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Chapters/Inleiding.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2966,
+								2976
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Chapters/UnrealEngine4.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1276,
+								1278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Chapters/VisualScripting.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								821,
+								823
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1395.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 121.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ResearchThesisMediatechnologies.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

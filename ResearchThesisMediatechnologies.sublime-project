@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+
+    "settings" : {
+        "TEXroot": "thesis.tex"
+    },
+
+	"build_systems":
+    [
+        {
+            "name": "Generate Glossary",
+            "shell_cmd": "makeglossaries thesis"
+        }
+    ]
+}
