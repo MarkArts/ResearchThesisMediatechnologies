@@ -48,7 +48,7 @@
 % Now comes the "Funny Quote", written in italics
 \textit{``I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.''}
 
-\begin{flushright}li
+\begin{flushright}
 Bill Gates
 \end{flushright}
 
@@ -71,19 +71,19 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 \setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
 
 % The Acknowledgements page, for thanking everyone
-\acknowledgements{
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+% \acknowledgements{
+% \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-Als eerste wil ik DPI bedanken voor het mogelijk maken en het faciliteren van deze scriptie. Extra dank gaat naar Boy .... die ons met enthousiasme en vertrouwen begeleid heeft.
+% Als eerste wil ik DPI bedanken voor het mogelijk maken en het faciliteren van deze scriptie. Extra dank gaat naar Boy .... die ons met enthousiasme en vertrouwen begeleid heeft.
 
-Naast DPI ben ik dankbaar voor het zelfde enthousiasme en vertrouwen van Emiel Bakker onze afstudeer begeleider vanuit het HRO.
+% Naast DPI ben ik dankbaar voor het zelfde enthousiasme en vertrouwen van Emiel Bakker onze afstudeer begeleider vanuit het HRO.
 
-Randy Dijkstra, die zijn scriptie aan de andere kant van mijn bureau schreef, wil ik bedanken voor zijn vriendschap. Zonder jou had ik aanzienlijk minder motivatie gehad om een uitdagend onderwerp te kiezen, laat staan het succesvol afronden ervan.
+% Randy Dijkstra, die zijn scriptie aan de andere kant van mijn bureau schreef, wil ik bedanken voor zijn vriendschap. Zonder jou had ik aanzienlijk minder motivatie gehad om een uitdagend onderwerp te kiezen, laat staan het succesvol afronden ervan.
 
-Als laatste bedank ik mijn ouders voor het dak boven mijn hoofd, mijn avondeten, het wassen, het opruimen en natuurlijk voor alle mogelijkheden die ze mij gegeven hebben om mijzelf te ontwikkelen. 
+% Als laatste bedank ik mijn ouders voor het dak boven mijn hoofd, mijn avondeten, het wassen, het opruimen en natuurlijk voor alle mogelijkheden die ze mij gegeven hebben om mijzelf te ontwikkelen. 
 
-}
-\clearpage  % End of the Acknowledgements
+% }
+% \clearpage  % End of the Acknowledgements
 %% ----------------------------------------------------------------
 
 \pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
@@ -116,12 +116,12 @@ Als laatste bedank ik mijn ouders voor het dak boven mijn hoofd, mijn avondeten,
 % End of the pre-able, contents and lists of things
 % Begin the Dedication page
 
-\setstretch{1.3}  % Return the line spacing back to 1.3
+% \setstretch{1.3}  % Return the line spacing back to 1.3
 
-\pagestyle{empty}  % Page style needs to be empty for this page
-\dedicatory{Voor all mijn vrienden die om onverklaarbare redenen graag met mij omgaan}
+% \pagestyle{empty}  % Page style needs to be empty for this page
+% \dedicatory{Voor all mijn vrienden die om onverklaarbare redenen graag met mij omgaan}
 
-\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+% \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 
 
 %% ----------------------------------------------------------------
@@ -152,6 +152,7 @@ Als laatste bedank ik mijn ouders voor het dak boven mijn hoofd, mijn avondeten,
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 
+\input{Appendices/dpi_unreal_colosseumCharacter}
 \input{Appendices/ConditionalLogicVanTickFunctieVnLookEventIinCplusplus}
 \input{Appendices/ConditionalLogicVanTickFunctieVanLookEvents}
 
