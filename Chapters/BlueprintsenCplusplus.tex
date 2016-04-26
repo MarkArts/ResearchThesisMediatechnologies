@@ -76,7 +76,7 @@ We zien hier dat de gerelateerde code op drie verschillende plekken komt te staa
 \subsubsection{Blueprints}
 In Blueprints zou deze logica er als volgt uit zien:
 
-\includegraphics{OnDestroyedSoundDelay}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{OnDestroyedSoundDelay}
 
 In de blueprint implementatie is het in een oog opslag duidelijk dat er een geluid afgespeeld word op de locatie van de speler een seconde nadat deze deze dood gaat. De logica bevind zich op de dezelfde plek en de witte lijnen geven de flow van de logica aan. 
 
@@ -121,7 +121,7 @@ if (bActive != true || (bShouldUsedOnce && TimesUsed > 0) || bIsInTimeOut == tru
 \end{lstlisting}
 In vergelijking met 
 
-\includegraphics{EarlyReturnBluePrint}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{EarlyReturnBluePrint}
 
 Een ander voorbeeld is de volgende functie die bepaald of de trigger van een LookEventsComponent onderdeel was van een trace.
 
@@ -148,7 +148,7 @@ FHitResult ULookEventsComponent::WasHitByTrace(const TArray<FHitResult> HitResul
 
 In vergelijking met:
 
-\includegraphics{WasHitBytTraceBluePrintExample}
+\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{WasHitBytTraceBluePrintExample}
 
 Voor complexe conditionele logica is c++ sneller te begrijpen en geeft meer mogelijkheden om dit te versimpelen. 
 
