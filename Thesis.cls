@@ -139,6 +139,7 @@
 
 \usepackage[dutch]{babel}
 \selectlanguage{dutch}
+\usepackage{float}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
