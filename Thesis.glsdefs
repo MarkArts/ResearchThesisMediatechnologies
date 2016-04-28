@@ -118,3 +118,33 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{hud}{}%
+{%
+\gls@defglossaryentry{hud}%
+{%
+name={HUD},%
+sort={HUD},%
+type={acronym},%
+first={Head-up Display\glsspace (HUD)},%
+firstplural={Head-up Displays\glsspace (HUDs)},%
+text={HUD},%
+plural={HUDs},%
+description={Head-up Display},%
+descriptionplural={Head-up Display\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Head-up Display},%
+longplural={Head-up Displays},%
+short={HUD},%
+shortplural={HUDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
