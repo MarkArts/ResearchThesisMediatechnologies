@@ -102,6 +102,7 @@
 \usepackage{lstpatch}
 \usepackage{color}
 \usepackage{tikz}
+\usepackage{todonotes}
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,shapes,%
     matrix,shapes.symbols}

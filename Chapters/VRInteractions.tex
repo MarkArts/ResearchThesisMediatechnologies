@@ -52,6 +52,8 @@ Deze gamemode is bedoelt voor VR projecten waarin de speler door behulp van Mati
 
 \section{Characters}
 De VRInteractionsCharacters bevatten alle beweging en camera instellingen zoals oog hoogte. De instelling zijn gebaseerd op de \gls{vr} guidelines van Epic \href{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html#vrcharactersettings}{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html}.
+\todo{Fix link styling}
+
 
 \subsection{VRInteractionBaseCharacter}
 De VRInteractionBaseCharacter is de basis voor de VRInteractionCharacter en de VRInteractionsFlyCharacter. Deze character bevat de instellingen voor de camera hoogte en wat \gls{vr} gerelateerde logica zoals het roteren van de speler op basis van zijn kijk richting.
@@ -67,10 +69,10 @@ De VRInteractionCharacter is bedoelt voor spellen waarin de speler rond kan lope
 De VRInteractionCharacter is bedoelt voor spellen waarin de speler op een rails loopt. Het is mogelijk deze character makkelijk in Matinee te gebruiken. Verschil met de VRInteractionCharacter, naast het niet registeren van controle gerelateerde input, is dat de camera niet op oog hoogte maar in het midden van de character geplaatst word. Dit maakt het maken van de Matinee sequences logischer.
 
 \section{VRInteractionsPlayerController}
-\dots
+\todo{Add VRInteractionsPlayerController description}
 
 \section{VRInteractionsCameraManager}
-\dots
+\todo{Add VRInteractionsCameraManager description}
 
 \section{VRInteractionsHud}
 De VRInteractionsHud is de basis \gls{hud} die een cirkel tekent in het midden van het scherm om aan te geven dat er naar een actor met een LookEvent gekeken word.
@@ -84,7 +86,78 @@ De VRInteractionsHud is de basis \gls{hud} die een cirkel tekent in het midden v
 De \gls{hud} is afhankelijk van de VRInteractionsDataSingleton. Om te zorgen dat deze altijd correct word ingeladen kan de singleton als Game Singleton Class ingesteld worden. De singleton word namelijk gebruikt om informatie van de LookEventsComponents te verzamelen.
 
 \section{LookEventsComponent}
-\dots
+De LookEventsComponent vuurt events af op het moment dat er naar de opgegeven trigger gekeken word. Het is mogelijk om meerdere LookEventsComponents aan dezelfde actor toe te voegen waardoor onder andere menu's op basis van kijken gemaakt kunnen worden.
+
+De LookEventsComponent is de basis van de plugin en bijna alle nadere componenten zijn hierop gebaseerd. Interfaces op basis van kijken zijn makkelijk te gebruiken[?] en zijn compatibel met elke \gls{vr} bril.
+\todo{Should i source this?}
+
+
+\subsection{Implementatie}
+Voor een aantal weken zijn de LookEvents als zowel een Actor als een Component geïmplementeerd. Het voordeel van een Actor implementatie is dat er vanuit world editor in het rechter muisknop menu event's gekoppeld kunnen worden.
+
+\missingfigure{Screenshot van rechtmuisknop -> add event}
+
+Dit had als nadeel dat het event direct in het level Blueprint gekoppeld word wat aanmoedigt om hier de logica te plaatsen terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
+
+Ook is het lastig de Actor implementatie binnen een Blueprint Actor te gebruiken, dit kan via een ActorComponent. Het ActorComponent maakt het niet mogelijk om instellingen via de editor te doen en verplicht daardoor om alle settings via Blueprints te zetten, wat omslachtig en fout gevoelig is.
+
+Daarom is er voor de Component implementatie gekozen. Dit maakt het makkelijk om via de Blueprint editor events toe te voegen en kan in combinatie met meerdere LookEvents gebruikt worden. 
+
+\missingfigure{Screenshot van rechtermuis component -> add event}
+
+\subsection{Events}
+\todo{Write about how and why the events for LookEvents where implemented}
+Om de events zo makkelijk mogelijk te gebruiken is er voor gekozen een
+
+\subsection{Instelling}
+De volgende instellingen zijn mogelijk voor de LookEventsComponent:
+
+\begin{itemize}
+	\item bShouldUsedOnce
+	\item TimesUsed
+	\item TriggerTimeOut
+	\item SeenDelay
+	\item UnSeenDelay
+	\item bShouldDrawDebugLines
+	\item bShouldDrawTriggerDebug
+	\item ActorTriggerColor
+	\item ComponentTriggerColor
+	\item TriggerDistance
+	\item TriggerRadius
+	\item bActive
+	\item SeenTrigger
+	\item UnSeenTrigger
+\end{itemize}
+
+\subsubsection{Seen en UnSeen trigger}
+De trigger is het object waar naar gekeken kan worden. Er kan voor zowel het triggeren van het Seen event als voor het triggeren van het UnSeen event een ander object gekozen worden.
+
+Er is hier voor gekozen nadat het duidelijk werd dat er vaak een animatie plaatsvind of er extra objecten, bijvoorbeeld een menu, te voor schijn komen die niet in de originele trigger passen.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Voorbeeld_SeenUnseenTriggerBox}
+    \caption{Een voorbeeld waarin de geselecteerde trigger box het menu toont en het menu getoond blijft zolang er naar de tweede trigger box gekeken word}
+\end{figure}
+
+Als er niet specifiek een trigger opgegeven word word de Actor die het component bevat als Seen en Unseen trigger gezien. De triggers kunnen via blueprint gezet worden.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{SetSeenTriggerExample}
+    \caption{Een voorbeeld van het instellen van de triggers voor drie verschillende LookEventComponents}
+\end{figure}
+
+\subsection{Debugging}
+Tijdens de workshops werd er aangegeven dat het lastig was om de LookEvents te debuggen omdat de triggers niet te zien zijn. Er is voor gekozen om dezelfde debugging voor raytraces te implementeren voor de LookEvents.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{debugInformatieVanLookEvents}
+    \caption{Voorbeeld van debug informatie die een LookEvent kan tekenen.}
+\end{figure}
+
+Er word een lijn getekend vanaf de speler ter lengte van de TriggerDistance. Vervolgens word er een vierkant getekend rond de active triggers, er kan een kleur voor Actors en voor Components opgegeven worden. Als er een blocking hit is, door een niet doorzichtig object, word er een cirkel getekend met als diameter de TriggerRadius op de plek waar de blocking hit plaats vond.
 
 \section{CircleMenu}
 \dots
