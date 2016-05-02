@@ -1,0 +1,66 @@
+%!TEX root = ../Thesis.tex
+
+\chapter{Usability Test 1}
+\lhead{}
+
+Om het gebruiksgemak te meten van de VRInteractions plugin werden de niet-programmeurs gevraagd een probleem op te lossen, waar een optimale oplossing voor is vastgelegd, met behulp van de plugin. 
+
+De gebruikers worden gefilmd tijdens het maken van de opdracht en mogen vragen stellen als ze vast lopen of iets niet begrijpen.
+
+Aan de hand van afwijkende stappen en vragen die gesteld moesten worden word een conclusie getrokken.
+
+\section{De Opdracht}
+Voor de opdracht zal er een Mesh generator gemaakt worden. De generator zal bestaan uit een vierkant met hierin een aantal Meshes die als er lang genoeg naar gekeken word een MovableMesh versie van zichzelf zullen spawnen.
+
+\subsection{Omschrijving}
+Maak een Actor met daarin een triggbox die zichtbaar is tijdens het spelen. In de trigger box plaats je een aantal meshes. Als er naar een mesh gekeken word zal deze beginnen met ronddraaien en uiteindelijk zal een MovableMesh versie van de mesh gespawnd worden. 
+
+\subsection{Optimale oplossing}
+De volgende stappen zijn de oplossing die nodig zijn:
+
+Maken van de Actor
+\begin{itemize}
+	\item Maak een nieuwe Actor.
+	\item Voeg een trigger box component toe.
+		\begin{itemize}
+			\item Verander de "Hidden in Game" setting naar false.
+		\end{itemize} 
+	\item Voeg een sceneComponent toe met een relevante naam (bijvoorbeeld opties).
+	\item Voeg een StaticMeshComponent toe voor de gewenste opties.
+	\item Voeg een LookEventsComponent toe met een relevante naam (bijvoorbeeld optiesLookEvents).
+	\item Maak een functie die alle opties verbergt of toont met een relevante naam (bijvoorbeeld SetOptionsVisibility).
+	\item Koppel de OnSeen en OnUnSeen van de optiesLookEvents aan de SetOptionsVisibility.
+\end{itemize}
+
+Maken van opties
+\begin{itemize}
+	\item Voeg een StaticMeshComponent toe aan de opties SceneComponent.
+	\item Voeg een LookEventsComponent toe met een relevante naam (bijvoorbeeld ChairLookEvents of Optie1).
+	\item Koppel aan de Tick functie de volgende nodes.
+		\begin{itemize}
+			\item LooKEvents reference
+			\item Get Seen Progress
+			\item Seen Progress * rotation speed
+			\item Add Reltative Rotation to the static mesh
+		\end{itemize}
+	\item Koppel het OnSeen event aan de volgende nodes
+		\begin{itemize}
+			\item SpawnActor
+			\item SetOptionsVisibility
+			\item Delay
+			\item SetOptionsVisibility
+		\end{itemize}
+\end{itemize}
+
+Maken van een MovableMesh variant
+\begin{itemize}
+	\item Maak een nieuwe Blueprint class.
+	\item Kies voor de VRMovableMesh class.
+	\item verander de static mesh van de DefaultMesh naar de gewenste Mesh
+\end{itemize}
+
+\section{Uitvoering}
+\dots
+
+\section{Conclusie}
+\dots
