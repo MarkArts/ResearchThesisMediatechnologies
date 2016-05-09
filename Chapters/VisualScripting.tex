@@ -5,7 +5,7 @@
 \chapter{Visual Scripting}
 In dit hoofdstuk word een introductie gegeven van een visuele programmeer taal. Daarna word er als voorbeeld een vergelijking gemaakt tussen C++ en een visuele taal.
 
-\gls{vr} maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. 
+\gls{vs} maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. 
 
 \begin{figure}[!ht]
   \centering
@@ -28,6 +28,21 @@ Een aantal voorbeelden zijn
 \end{itemize}
 
 In deze scriptie word er gefocust op het gebruik van \gls{vr} voor gameplay logica.
+
+\section{Blueprints}
+Blueprints is het visuele scripting systeem van \gls{ue4} en wat deze scriptie mogelijk maakt. De beschrijving van Unreal zelf is als volgt:
+
+“Blueprints are special assets that provide an intuitive, node-based interface that can be used to create new types of Actors and script level events; giving designers and gameplay programmers the tools to quickly create and iterate gameplay from within Unreal Editor without ever needing to write a line of code.”
+
+Blueprints ziet er als volgt uit:
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{BluePrintSeenExample}
+    \caption{Voorbeeld van een Blueprint.}
+\end{figure}
+
+Een hele kort samenvatting zou zijn dat de rode nodes Events zijn en dus aangeven wanneer iets gebeurd, de witte lijnen bepalen de volgorde waarin de nodes worden uitgevoerd, de blauwe nodes zijn functies en de rest zijn variabelen of pure transformatie van data.
 
 \section{Gameplay Logica}
 Het programmeren van gameplay in een spel bestaat voor een groot gedeelte uit de vragen “Wanneer moet iets gebeuren”, “Wat moet er gebeuren” en “Hoe moet dit gebeuren”.
