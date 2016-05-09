@@ -189,13 +189,6 @@ In c++ is er ook veel meer controle over de manier waarop de computer logica int
 
 Daarnaast is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbaar manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces wat de LookEventsComponents nodig hebben is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt als deze trace dan al eerder door een andere LookEventsComponent berekend is krijg hij de resultaten van die trace inplaats van een nieuwe trace te maken.
 
-\subsection{Conclusie}
-Voor de wanneer vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat.
-
-Voor de hoe vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. 
-
-Voor de wat vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. 
-
 \section{Workflow}
 Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag mogelijk houden met zo veel mogelijk vrijheid. Daarnaast is flexibiliteit belangrijk voor het makkelijk en veilig experimenteren en itereren.
 
@@ -217,7 +210,8 @@ Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en w
 				\node[punktchain, join] (wanneer) 			
 					{Wanner en wat (Blueprints)};
 		\end{tikzpicture}
-		\caption{Workflow voor het programmeren voor de Unreal Engine 4.}
+	\caption{Workflow voor het programmeren voor de Unreal Engine 4.}
+	\label{fig:workflow}
 \end{figure}
 
 Elk component zal beginnen als een imperfecte Blueprint logica. In dit stadium is de performance en onderhoud niet belangrijk, en hoeft het niet eens compleet functioneel te zijn. Er kan direct ge-experimenteert en getest worden. Dit kan niet alleen waardevolle informatie opleveren voor het design aspect van een project maar plaats de logica ook in de context van het project. Vaak komt hier gewenste functionaliteit uit die tijdens het bedenken over het hoofd gekeken is.
@@ -234,3 +228,6 @@ Versie controle is een belangrijk onderdeel van elk ICT project en al valt dit b
 Versie controle is een belangrijk onderdeel in samen werken aan code en speelt een belangrijke rol in het onderhoud van code. Er zijn tools in \gls{ue4} om versie controle tools zoals git en svn op Blueprints, en assets, toe te passen. Voor deze scriptie is de plugin ontwikkeld met behulp van git maar is er niet gekeken naar een manier waarop niet-programmeurs hier ook mee kunnen werken.
 
 Tijdens de interviews[?] werd het duidelijk dat er geen bestaande kennis van versie controle aanwezig was in de visuele teams van DPI. Het kiezen, opzetten en leren van versie controle en de integratie hiervan met de \gls{ue4} valt buiten de scope van deze scriptie.
+
+\section{Conclusie}
+Door de gameplay logica te verdelen in Hoe, Wat en Waar hebben wij richtlijnen opgesteld voor het implementeren van gameplay. Voor de wanneer vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat. Voor de hoe vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. Voor de wat vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. Met deze richtlijnen raden wij de workflow aan getoond in figuur~\ref{fig:workflow}
