@@ -69,13 +69,12 @@ De VRInteractionCharacter is bedoelt voor spellen waarin de speler rond kan lope
 De VRInteractionCharacter is bedoelt voor spellen waarin de speler op een rails loopt. Het is mogelijk deze character makkelijk in Matinee te gebruiken. Verschil met de VRInteractionCharacter, naast het niet registeren van controle gerelateerde input, is dat de camera niet op oog hoogte maar in het midden van de character geplaatst word. Dit maakt het maken van de Matinee sequences logischer.
 
 \section{VRInteractionsPlayerController}
-De VRInteractionsPlayerController is gebaseerd op de standaard PlayerController van Eric. De controller is verantwoordelijk voor het correct doorgeven van de input naar de ingestelde Character.
-\todo{Write more about our specific uses of the player controller}
+De VRInteractionsPlayerController is gebaseerd op de standaard PlayerController van Epic. De controller is verantwoordelijk voor het correct doorgeven van de input naar de ingestelde Character.
 
+In de controller zorgen wij ook dat de rotatie van de controller klopt met de rotatie van de headset op het moment dat de headset aangezet word, zo kan de headset tijdens het spelen aan en uit gezet worden.
 
 \section{VRInteractionsCameraManager}
-De VRInteractionsCameraManager is gebaseerd op de standaard VRInteractionsCameraManager van Epic. Deze Manager is verantwoordelijk voor het instellen van de camera's.
-\todo{Write more about our specific use the the manager}
+De VRInteractionsCameraManager is gebaseerd op de standaard VRInteractionsCameraManager van Epic. Deze Manager is verantwoordelijk voor het instellen van camera instellingen zoals de FOV. 
 
 \section{VRInteractionsHud}
 De VRInteractionsHud is de basis \gls{hud} die een cirkel tekent in het midden van het scherm om aan te geven dat er naar een actor met een LookEvent gekeken word.
@@ -91,29 +90,44 @@ De \gls{hud} is afhankelijk van de VRInteractionsDataSingleton. Om te zorgen dat
 \section{LookEventsComponent}
 De LookEventsComponent vuurt events af op het moment dat er naar de opgegeven trigger gekeken word. Het is mogelijk om meerdere LookEventsComponents aan dezelfde actor toe te voegen waardoor onder andere menu's op basis van kijken gemaakt kunnen worden.
 
-De LookEventsComponent is de basis van de plugin en bijna alle nadere componenten zijn hierop gebaseerd. Interfaces op basis van kijken zijn makkelijk te gebruiken[?] en zijn compatibel met elke \gls{vr} bril.
-\todo{Should i source this?}
+De LookEventsComponent is de basis van de plugin en bijna alle nadere componenten zijn hierop gebaseerd. Interfaces op basis van kijken zijn makkelijk te gebruiken[?]~\todo{Should i source this?} en zijn compatibel met elke \gls{vr} bril.
 
 
 \subsection{Implementatie}
 Voor een aantal weken zijn de LookEvents als zowel een Actor als een Component geïmplementeerd. Het voordeel van een Actor implementatie is dat er vanuit world editor in het rechter muisknop menu event's gekoppeld kunnen worden.
 
-\missingfigure{Screenshot van rechtmuisknop -> add event}
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{VRInteractions_OnSeenLevel}
+    \caption{Voorbeeld van het kopellen van een event aan een actor.}
+\end{figure}
 
 Dit had als nadeel dat het event direct in het level Blueprint gekoppeld word wat aanmoedigt om hier de logica te plaatsen terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
 
 Ook is het lastig de Actor implementatie binnen een Blueprint Actor te gebruiken, dit kan via een ActorComponent. Het ActorComponent maakt het niet mogelijk om instellingen via de editor te doen en verplicht daardoor om alle settings via Blueprints te zetten, wat omslachtig en fout gevoelig is.
 
-Daarom is er voor de Component implementatie gekozen. Dit maakt het makkelijk om via de Blueprint editor events toe te voegen en kan in combinatie met meerdere LookEvents gebruikt worden.
+Daarom is er voor de Component implementatie gekozen. Dit maakt het makkelijk om via de Blueprint editor events toe te voegen en kunnen er meerdere LookEvents gebruikt worden. Het is nog steeds mogelijk om een level Blueprint event binnen de actor te maken die gekoppeld is aan het event van de component.
 
 \subsection{Events}
 De koppeling met Blueprints zit zich voornamelijk in de events die afgevuurd worden door de LookEventsComponent. Dit is ook de interface waarmee de niet-programmeurs de interactie kunnen programmeren.
 
-Er kan op twee manieren logica aan een event gekoppeld worden. De eerste is via het component menu \todo{zie figure x} en de tweede zoals getoond in \todo{figure x2}.
+Er kan op twee manieren logica aan een event gekoppeld worden. De eerste is via het component menu zoals getoond in figuur~\ref{fig:ComponentMenuEvent} en de tweede zoals getoond in figuur~\ref{fig:ComponentReferenceAsign}.
 
-\missingfigure{Screenshot van manier twee.}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{VRInteractions_EventComponent}
+    \caption{Voorbeeld van het koppelen van een event via het component menu.}
+    \label{fig:ComponentMenuEvent}
+\end{figure}
 
-Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs terwijl voor manier twee wel uitleg nodig was.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{VRInteractions_OnSeenAsign}
+    \caption{Voorbeeld van het koppelen van een event via een reference naar een LookEventsComponent}
+    \label{fig:ComponentReferenceAsign}
+\end{figure}
+
+Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs terwijl voor manier twee wel uitleg nodig was~\todo{Reference naar user tests}.
 
 \subsection{Instelling}
 De volgende instellingen zijn mogelijk voor de LookEventsComponent:
@@ -190,6 +204,15 @@ Om te zorgen dat de meshes correct gepositioneerd worden in een cirkel kan er ee
 
 De combinatie van het genereren en volgen van de speler zorgt ervoor dat de niet-programmeurs uitgebreide menu's in \gls{vr} kunnen creëren.
 
+\subsection{Instellingen}
+\begin{itemize}
+	\item Options
+	\item OptionsSize
+	\item DrawDebugBoxes
+	\item TriggerDistance
+	\item FollowPlayer
+\end{itemize}
+
 \subsection{Events}
 Voor het circlemenu moest een Actor gemaakt worden, omdat components geen subcomponents kunnen hebben. Dit maakt het mogelijk om via het rechtermuisknop menu events te koppelen in het level Blueprint.
 
@@ -209,18 +232,8 @@ Helaas maakt dit het gebruik van het CircleMenu in een Actor omslachtig. Er moet
 
 Deze omslachtigere manier van event koppeling vergt beter kennis van Blueprints en werd als onduidelijk ervaren door de niet-programmeurs \todo{reference workshop}. 
 
-\subsection{Instellingen}
-\begin{itemize}
-	\item Options
-	\item OptionsSize
-	\item DrawDebugBoxes
-	\item TriggerDistance
-	\item FollowPlayer
-\end{itemize}
-
 \section{VRMovableMesh}
 De VRMovableMesh is een Actor die verplaatsbaar is door middel van een interactie knop en het kijken naar de bestemming. Het object word versleept naar de locatie waar naar gekeken zolang er een knop ingedrukt word.
-
 
 \begin{figure}[!ht]
   \centering
