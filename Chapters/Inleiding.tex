@@ -2,50 +2,51 @@
 \chapter{Inleiding}
 \lhead{\emph{Inleiding}}
 
-In een periode van 18 weken zal ik proberen een reeks van basis componenten voor de \gls{ue4} te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \gls{vr} demo’s kunnen toevoegen.
+In een periode van 18 weken is er geprobeerd een reeks van basis componenten voor de \gls{ue4} te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \gls{vr} demo’s kunnen toevoegen.
 
-De \gls{ue4} zal gebruikt worden omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica, zoals wanneer en waar iets moet plaats vinden, makkelijk uit te drukke. Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Naast een efficiëntere workflow maakt dit het ook makkelijk om als designer, 3D artist te experimenteren.
+De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica makkelijk uit te drukke, zie hoofdstuk~\ref{ch:visualscripting}. Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
 
 \section{Probleemstelling}
 
-Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeer taak omdat het vaak ontwikkelt wordt voor een specifieke use case. Het is daardoor vaak lastig om de geprogrammeerde logica te hergebruiken in een ander project. 
+Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeer taak omdat er nog geen interactie standaard is en elke hardware andere input gebruikt. Het is daardoor ook lastig om de geprogrammeerde logica te hergebruiken in een ander project. Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. 
 
-Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. Vooral in gameontwikkeling zijn er veel sprongen gemaakt in het oplossen van dit probleem. Een van deze oplossingen is het gebruikt van \gls{vs} om interactie in een spel te programmeren. Er zijn hier al veel sprongen in gemaakt maar het implementeren van \gls{vr} gerelateerde componenten is nog niet standaard aanwezig.
+In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van deze afhankelijkheid van programmeurs af te komen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruikt van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
 
 \section{Doelstelling}
 
 Het creëren van een reeks basis componenten voor \gls{ue4} waarmee niet programmeurs interactieve \gls{vr} demo’s kunnen maken die toegevoegde waarde hebben aan de workflow van DPI.
 
-Aan het eind van dit traject zal het mogelijk zijn om met de gemaakte componenten een bestaande omgeving zonder programmeren geschikt te maken voor \gls{vr} en om een nieuwe omgeving op te zetten zonder behulp van een programmeur.
+Aan het eind van dit traject zal het mogelijk zijn om met de gemaakte componenten een bestaande omgeving geschikt te maken voor \gls{vr} en om een nieuwe omgeving op te zetten zonder behulp van een programmeur.
 
 \section{Onderzoeksvraag}
 
 \subsection{Hoofdvraag}
 
-Hoe realiseren we een ontwikkel omgeving waarin niet-programmeurs, zoals 3D artists en level designers, efficiënt unieke \gls{vr} ervaring kunnen creëren in \gls{ue4}.
+Hoe realiseren we een ontwikkel omgeving waarin niet-programmeurs, zoals 3D modellers en level designers, efficiënt unieke \gls{vr} ervaring kunnen creëren in \gls{ue4}.
 
 \subsection{Deelvragen}
 
 \begin{itemize}  
-\item Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs. 
+\item Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs? 
 	\begin{itemize}
-	\item Wat is de huidige kennis van computer logica onder de werknemers van DPI
-	\item Is er extra training nodig om met de ontwikkel omgeving aan de slag te gaan
+	\item Wat is de huidige kennis van computer logica onder de werknemers van DPI?
+	\item Is er extra training nodig om met de ontwikkel omgeving aan de slag te gaan?
 	\end{itemize}
 \item Welke componenten zullen gemaakt moeten worden?
 	\begin{itemize}
-	\item Wat zijn de huidige taken van een programmeer in het maken van een Virtuele omgeving
-	\item Welke tools bestaan er all
-	\item Wat zijn de juiste abstracties van de componenten 
+	\item Wat zijn de huidige taken van een programmeer in het maken van een virtuele omgeving?
+	\item Welke tools bestaan er all?
+	\item Wat zijn de juiste abstracties van de componenten? 
 	\end{itemize}
-\item Is het mogelijk de componenten cross-platform te maken 
+\item Is het mogelijk de componenten cross-platform te maken?
 	\begin{itemize}
 	\item Welke platformen zijn relevant?
-	\item Wat zijn de verschillende mogelijkheden van deze platformen
+	\item Wat zijn de verschillende mogelijkheden van deze platformen?
 	\end{itemize}
 \end{itemize}
 
 \subsection{Onderzoeksmethoden}
+\label{subsec:onderzoeksmethoden}
 
 \subsubsection{Hoe kan er een koppeling met Virtual Scripting gemaakt worden die intuïtief is voor niet programmeurs?}
 
