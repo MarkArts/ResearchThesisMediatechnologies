@@ -5,13 +5,13 @@
 \label{ch:vrinteractions}
 \lhead{\emph{VRInteractions}}
 In dit hoofdstuk worden de keuzes voor en de werking van de VRInteractions \gls{ue4} plugin besproken. 
-Voor elk component in de plugin word de werking en mogelijkheden getoond. Daarnaast word voor elk component, waar relevant, besproken hoe de workshops de design keuzes beïnvloed heeft.
+Voor elk component in de plugin worden de werking en mogelijkheden getoond. Daarnaast wordt voor elk component, waar relevant, besproken hoe de workshops de design keuzes beïnvloed heeft.
 
 \section{De plugin}
-De VRInteractions plugin is een combinatie van c++ code, Blueprints en overschrijfbare game modes.
+De VRInteractions plugin is een combinatie van C++ code, Blueprints en overschrijfbare game modes.
 De plugin heeft als doel om de \gls{vr} specifieke logica te verbergen voor gameplay logica zodat niet-programmeurs interactieve \gls{vr} omgevingen kunnen maken.
 
-De plugin word ontwikkeld volgens de workflow die beschreven word in Hoofdstuk~\ref{ch:BlueprintsEnCpp} op pagina~\pageref{ch:BlueprintsEnCpp}.
+De plugin word ontwikkeld volgens de workflow die beschreven wordt in Hoofdstuk~\ref{ch:BlueprintsEnCpp} op pagina~\pageref{ch:BlueprintsEnCpp}.
 
 De plugin bevat op moment van schrijven de volgende componenten:
 \begin{itemize}
@@ -35,58 +35,58 @@ De plugin bevat op moment van schrijven de volgende componenten:
 \end{itemize}
 
 \section{Gamemodes}
-De plugin bevat de game modes VRInteractionsFlyTroughGameMode en VRInteractionsGameMode. Deze modes zijn beide een uitbreiding van de voorbeeld \gls{ue4} characters. Beide gamemodes zijn geschikt voor zowel de Oculus als de GearVR. 
+De plugin bevat de gamemodes VRInteractionsFlyTroughGameMode en VRInteractionsGameMode. Deze modes zijn beide een uitbreiding van de voorbeeld \gls{ue4} characters. Beide gamemodes zijn geschikt voor zowel de Oculus als de GearVR. 
 
-De game modes zijn bedoelt om de basis instellingen voor \gls{vr} in te stellen en zijn voor de meeste applicaties voldoende. In het geval dat er iets in de gamemode aangepast moet worden is het mogelijk de instelling te overschrijven of de gehele gamemode over te erven.
+De gamemodes zijn bedoelt om de basis instellingen voor \gls{vr} in te stellen en zijn voor de meeste applicaties voldoende. In het geval dat er iets in de gamemode aangepast moet worden is het mogelijk de instelling te overschrijven of de gehele gamemode over te erven.
 
-Omdat er gebruik word gemaakt van een aantal input events is het aan te raden om een project altijd te beginnen als First Person Template.
+Omdat er gebruik wordt gemaakt van een aantal input events is het aan te raden om een project altijd te beginnen als First Person Template.
 
 \subsection{VRInteractionsGameMode}
 De VRInteractionsGameMode maakt gebruik van de VRInteractionCharacter, VRInteractionsHud, VRInteractionsPlayerController en de VRInteractionsCameraManager. 
 
-De game mode is bedoeld voor spellen waarin de speler kan rondlopen en zorgt ervoor dat de headset juist word geïnstalleerd en de juiste controllers ingesteld staan.
+De gamemode is bedoeld voor spellen waarin de speler kan rondlopen en zorgt ervoor dat de headset juist wordt geïnstalleerd en de juiste controllers ingesteld staan.
 
 \subsection{VRInteractionsFlyTroughGameMode}
 De VRInteractionsFlyTroughGameMode is een gestripte versie van de VRInteractionsGameMode en maakt gebruik van de VRInteractionsFlyCharacter, VRInteractionsHud, VRInteractionsPlayerController en VRInteractionsCameraManager.
 
-Deze gamemode is bedoelt voor VR projecten waarin de speler door behulp van Matinee rondvliegt.
+Deze gamemode is bedoelt voor VR projecten waarin de speler met behulp van Matinee rondvliegt.
 
 \section{Characters}
-De VRInteractionsCharacters bevatten alle beweging en camera instellingen zoals oog hoogte. De instelling zijn gebaseerd op de \gls{vr} guidelines van Epic \href{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html#vrcharactersettings}{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html}.
+De VRInteractionsCharacters bevatten alle beweging- en camera instellingen zoals ooghoogte. De instellingen zijn gebaseerd op de \gls{vr} guidelines van Epic \href{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html#vrcharactersettings}{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html}.
 \todo{Fix link styling}
 
 
 \subsection{VRInteractionBaseCharacter}
-De VRInteractionBaseCharacter is de basis voor de VRInteractionCharacter en de VRInteractionsFlyCharacter. Deze character bevat de instellingen voor de camera hoogte en wat \gls{vr} gerelateerde logica zoals het roteren van de speler op basis van zijn kijk richting.
+De VRInteractionBaseCharacter is de basis voor de VRInteractionCharacter en de VRInteractionsFlyCharacter. Deze characters bevatten de instellingen voor de camera hoogte en enkele \gls{vr} gerelateerde logica zoals het roteren van de speler op basis van zijn kijkrichting.
 
-Ook word hierin de GearVR touch pad input afgehandeld.
+Ook wordt hierin de GearVR touch pad input afgehandeld.
 
-Het is niet de bedoeling deze classe direct te implementeren. In plaats daarvan kan er gekozen worden voor de VRInteractionCharacter of de VRInteractionsFlyCharacter. Als er een nieuwe soort character gemaakt moet worden kan die natuurlijk overerven van de VRInteractionBaseCharacter.
+Het is niet de bedoeling deze classe direct te implementeren. In plaats daarvan kan er gekozen worden voor de VRInteractionCharacter of de VRInteractionsFlyCharacter. Als er een nieuw soort character gemaakt moet worden kan die natuurlijk overerven van de VRInteractionBaseCharacter.
 
 \subsection{VRInteractionCharacter}
 De VRInteractionCharacter is bedoelt voor spellen waarin de speler rond kan lopen. De instellingen en functies zijn op basis van de \gls{ue4} \gls{vr} guidelines en de testen van de \gls{vr} demo gemaakt.
 
 \subsection{VRInteractionsFlyCharacter}
-De VRInteractionCharacter is bedoelt voor spellen waarin de speler op een rails loopt. Het is mogelijk deze character makkelijk in Matinee te gebruiken. Verschil met de VRInteractionCharacter, naast het niet registeren van controle gerelateerde input, is dat de camera niet op oog hoogte maar in het midden van de character geplaatst word. Dit maakt het maken van de Matinee sequences logischer.
+De VRInteractionCharacter is bedoelt voor spellen waarin de speler op een rails loopt. Het is mogelijk deze character makkelijk in Matinee te gebruiken. Verschil met de VRInteractionCharacter, naast het niet registeren van controle gerelateerde input, is dat de camera niet op ooghoogte maar in het midden van de character geplaatst wordt. Dit maakt het maken van de Matinee sequences logischer.
 
 \section{VRInteractionsPlayerController}
 De VRInteractionsPlayerController is gebaseerd op de standaard PlayerController van Epic. De controller is verantwoordelijk voor het correct doorgeven van de input naar de ingestelde Character.
 
-In de controller zorgen wij ook dat de rotatie van de controller klopt met de rotatie van de headset op het moment dat de headset aangezet word, zo kan de headset tijdens het spelen aan en uit gezet worden.
+In de controller zorgen wij ook dat de rotatie van de controller klopt met de rotatie van de headset op het moment dat de headset aangezet wordt, zo kan de headset tijdens het spelen aan en uit gezet worden.
 
 \section{VRInteractionsCameraManager}
 De VRInteractionsCameraManager is gebaseerd op de standaard VRInteractionsCameraManager van Epic. Deze Manager is verantwoordelijk voor het instellen van camera instellingen zoals de FOV. 
 
 \section{VRInteractionsHud}
-De VRInteractionsHud is de basis \gls{hud} die een cirkel tekent in het midden van het scherm om aan te geven dat er naar een actor met een LookEvent gekeken word.
+De VRInteractionsHud is de basis \gls{hud} die een cirkel tekent in het midden van het scherm om aan te geven dat er naar een actor met een LookEvent gekeken wordt.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{HudExample}
-    \caption{De cirkel die getekend word op het moment dat er naar een Actor met een LookEventsComponent gekeken word.}
+    \caption{De cirkel die getekend wordt op het moment dat er naar een Actor met een LookEventsComponent gekeken wordt.}
 \end{figure}
 
-De \gls{hud} is afhankelijk van de VRInteractionsDataSingleton. Om te zorgen dat deze altijd correct word ingeladen kan de singleton als Game Singleton Class ingesteld worden. De singleton word namelijk gebruikt om informatie van de LookEventsComponents te verzamelen.
+De \gls{hud} is afhankelijk van de VRInteractionsDataSingleton. Om te zorgen dat deze altijd correct wordt ingeladen kan de singleton als Game Singleton Class ingesteld worden. De singleton wordt namelijk gebruikt om informatie van de LookEventsComponents te verzamelen.
 
 \section{LookEventsComponent}
 De LookEventsComponent vuurt events af op het moment dat er naar de opgegeven trigger gekeken word. Het is mogelijk om meerdere LookEventsComponents aan dezelfde actor toe te voegen waardoor onder andere menu's op basis van kijken gemaakt kunnen worden.
@@ -103,7 +103,7 @@ Voor een aantal weken zijn de LookEvents als zowel een Actor als een Component g
     \caption{Voorbeeld van het kopellen van een event aan een actor.}
 \end{figure}
 
-Dit had als nadeel dat het event direct in het level Blueprint gekoppeld word wat aanmoedigt om hier de logica te plaatsen terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
+Dit heeft als nadeel dat het event direct in het level Blueprint gekoppeld wordt wat aanmoedigt om hier de logica te plaatsen terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
 
 Ook is het lastig de Actor implementatie binnen een Blueprint Actor te gebruiken, dit kan via een ActorComponent. Het ActorComponent maakt het niet mogelijk om instellingen via de editor te doen en verplicht daardoor om alle settings via Blueprints te zetten, wat omslachtig en fout gevoelig is.
 
@@ -153,7 +153,7 @@ De volgende instellingen zijn mogelijk voor de LookEventsComponent:
 \subsubsection{Seen en UnSeen trigger}
 De trigger is het object waar naar gekeken kan worden. Er kan voor zowel het triggeren van het Seen event als voor het triggeren van het UnSeen event een ander object gekozen worden.
 
-Er is hier voor gekozen nadat het duidelijk werd dat er vaak een animatie plaatsvind of er extra objecten, bijvoorbeeld een menu, te voor schijn komen die niet in de originele trigger passen.
+Er is hier voor gekozen nadat het duidelijk werd dat er vaak een animatie plaats vind of er extra objecten, bijvoorbeeld een menu, tevoorschijn komen die niet in de originele trigger passen.
 
 \begin{figure}[!ht]
   \centering
@@ -178,7 +178,7 @@ Tijdens de workshops werd er aangegeven dat het lastig was om de LookEvents te d
     \caption{Voorbeeld van debug informatie die een LookEvent kan tekenen.}
 \end{figure}
 
-Er word een lijn getekend vanaf de speler ter lengte van de TriggerDistance. Vervolgens word er een vierkant getekend rond de active triggers, er kan een kleur voor Actors en voor Components opgegeven worden. Als er een blocking hit is, door een niet doorzichtig object, word er een cirkel getekend met als diameter de TriggerRadius op de plek waar de blocking hit plaats vond.
+Er wordt een lijn getekend vanaf de speler ter lengte van de TriggerDistance. Vervolgens word er een vierkant getekend rond de active triggers, er kan een kleur voor Actors en voor Components opgegeven worden. Als er een blocking hit is, door een niet doorzichtig object, word er een cirkel getekend met als diameter de TriggerRadius op de plek waar de blocking hit plaats vond.
 
 \section{CircleMenu}
 Het CircleMenu genereert een menu van LookEventsComponents op basis van een lijst van meshes.
@@ -195,7 +195,7 @@ Het CircleMenu genereert een menu van LookEventsComponents op basis van een lijs
     \caption{Het instellen van de opties in een CircleMenu.}
 \end{figure}
 
-Om te zorgen dat de meshes correct gepositioneerd worden in een cirkel kan er een grootte van de meshes opgegeven worden en worden de meshes op basis hiervan individueel gescaled. Ook word er rekening mee gehouden dat het pivot point van een mesh niet altijd in het midden bevind en word er berekend wat het midden van de mesh is om vervolgens de mesh correct te positioneren. Er is ook een optie om het menu altijd richting de speler te tonen. 
+Om te zorgen dat de meshes correct gepositioneerd worden in een cirkel kan er een grootte van de meshes opgegeven worden en worden de meshes op basis hiervan individueel gescaled. Ook wordt er rekening mee gehouden dat het pivot point van een mesh zich niet altijd in het midden bevindt en wordt er berekend wat het midden van de mesh is om vervolgens de mesh correct te positioneren. Er is ook een optie om het menu altijd richting de speler te tonen. 
 
 \begin{figure}[!ht]
   \centering
@@ -223,7 +223,7 @@ Voor het circlemenu moest een Actor gemaakt worden, omdat components geen subcom
     \caption{Het koppelen van een event via het level Blueprint.}
 \end{figure}
 
-Helaas maakt dit het gebruik van het CircleMenu in een Actor omslachtig. Er moet namelijk gebruikt worden van een ChildActor component. De ChildActor component maakt het niet mogelijk om instellingen via het detail menu in te stellen. Hierdoor zal het daadwerkelijk CircleMenu via Blueprints benaderd moeten worden.
+Helaas maakt dit het gebruik van het CircleMenu in een Actor omslachtig. Er moet namelijk gebruik gemaakt worden van een ChildActor component. De ChildActor component maakt het niet mogelijk om instellingen via het detail menu in te stellen. Hierdoor zal het daadwerkelijk CircleMenu via Blueprints benaderd moeten worden.
 
 \begin{figure}[H]
   \centering
@@ -234,7 +234,7 @@ Helaas maakt dit het gebruik van het CircleMenu in een Actor omslachtig. Er moet
 Deze omslachtigere manier van event koppeling vergt beter kennis van Blueprints en werd als onduidelijk ervaren door de niet-programmeurs \todo{reference workshop}. 
 
 \section{VRMovableMesh}
-De VRMovableMesh is een Actor die verplaatsbaar is door middel van een interactie knop en het kijken naar de bestemming. Het object word versleept naar de locatie waar naar gekeken zolang er een knop ingedrukt word.
+De VRMovableMesh is een Actor die verplaatsbaar is door middel van een interactie knop en het kijken naar de bestemming. Het object wordt versleept naar de locatie waar naar gekeken wordt zolang men een knop indrukt.
 
 \begin{figure}[!ht]
   \centering

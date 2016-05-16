@@ -19,7 +19,7 @@ Een ingewikkelder versie van de LookEvents implementeren met hierin:
 
 \section{Opdrachten}
 
-We gaan een bank maken waar een menu boven zweeft waarmee wij het materiaal van de bank kunnen kiezen. Het menu word zichtbaar op het moment dat er naar de bank gekeken word.
+We gaan een bank maken waar een menu boven zweeft waarmee wij het materiaal van de bank kunnen kiezen. Het menu wordt zichtbaar op het moment dat er naar de bank gekeken wordt.
 
 \subsection{Opdracht 1}
 Maak van de bank een Blueprint en voeg hier een scene (dit is een component) aan toe genaamd options met daarin drie static meshes genaamd option0 t/m option2.
@@ -35,7 +35,7 @@ Voeg voor elk element een Lookevent component toe en noem die LookEventOption0 t
 Koppel de look events aan de juiste options, kijk hiervoor naar de vorige opdracht, en zet de optie  “Draw debug trigger” aan zodat je makkelijk kan zien of alles werkt.
 
 \subsection{Opdracht 2}
-Om te zorgen dat de options alleen zichtbaar worden als er naar de bank gekeken word voegen we nog een LookEvents component toe genaamd “LookEventsMain”. 
+Om te zorgen dat de options alleen zichtbaar worden als er naar de bank gekeken wordt voegen we nog een LookEvents component toe genaamd “LookEventsMain”. 
 
 Om de code schoner te houden maken we een functie genaamd “SetOptionsVisibility” met boolean als input genaamd “Visibility”. In deze functie haal je alle kinderen van de Options scene component op en zet je de visibility hiervan op de input.
 
@@ -48,10 +48,10 @@ Om de code schoner te houden maken we een functie genaamd “SetOptionsVisibilit
 Koppel nu de OnSeen en de OnUnseen events van de “LookEventsMain” aan de “SetOptionsVisibility” functie.
 
 \subsection{Opdracht 3}
-We gebruiken de materials van de options static meshes om de material van de bank te bepalen. Op het moment dat er naar een option gekeken word (dus het OnSeen event) halen we de material uit de bijhorende option en zetten we material van de hoofd static mesh hierop
+We gebruiken de materials van de options static meshes om de material van de bank te bepalen. Op het moment dat er naar een option gekeken wordt (dus het OnSeen event) halen we de material uit de bijhorende option en zetten we material van de hoofd static mesh hierop.
 
 \subsection{Opdracht 4}
-Probeer niet de material maar de mesh van de bank te veranderden. Je kan dit do en via de static meshes van de options (zelfde manier als wij de kleuren maken) maar als je een uitdaging wilt probeer het via een array variable.
+Probeer niet de material maar de mesh van de bank te veranderden. Je kan dit doen via de static meshes van de options (zelfde manier als wij de kleuren maken) maar als je een uitdaging wil probeer het via een array variable.
 
 \begin{figure}[!ht]
   \centering
@@ -62,6 +62,6 @@ Probeer niet de material maar de mesh van de bank te veranderden. Je kan dit do 
 Als je voor een variabel gaat vergeet niet dat dit een lijst van Static Mesh References moet zijn.
 
 \section{Reflectie}
-Na het bespreken van de opdracht werd er aangegeven dat er minder tijd kwijt aan het zoeken naar functie namen omdat een gelijke opdracht van te voren samen gemaakt was. 
+Na het bespreken van de opdracht werd er aangegeven dat er minder tijd kwijt was aan het zoeken naar functienamen omdat een gelijke opdracht van te voren samen gemaakt was. 
 
 Het viel op dat concepten waar in de vorige workshop problemen mee waren dit keer wel goed gingen, bijvoorbeeld het correct zetten van de LookEvents trigger, zonder hier specifieke instructies voor te geven.

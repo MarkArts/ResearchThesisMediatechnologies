@@ -2,18 +2,18 @@
 \chapter{Unreal Engine 4}
 \lhead{\emph{Unreal Engine 4}}
 
-In dit hoofdstuk word er een vergelijking gemaakt van verschillende game engines en word de keuze voor \gls{ue4} uitgelegd.
+In dit hoofdstuk wordt er een vergelijking gemaakt tussen verschillende game engines en wordt de keuze voor \gls{ue4} uitgelegd.
 
 \section{Vergelijking van game engine's}
 
-Tijdens het kiezen van een Engine waren er drie rand voorwaarden namelijk 
+Tijdens het kiezen van een engine waren er drie rand voorwaarden namelijk 
 \begin{enumerate}
 	\item gratis voor educatie, of goedkoop genoeg voor DPI om aan te schaffen
 	\item Oculus en GearVR ondersteuning
 	\item Een \gls{vs} systeem
 \end{enumerate}
 
-De volgende Engine’s zijn naar gekeken 
+Er is gekeken naar de volgende engine's 
 \begin{itemize}
 \item Unity\footnote{\url{https://unity3d.com}}
 \item CRYENGINE\footnote{\url{https://www.cryengine.com}}
@@ -23,22 +23,22 @@ De volgende Engine’s zijn naar gekeken
 \subsection{Unity}
 
 \subsubsection{Licentie}
-Unity heeft een educatie licentie waaronder het grootste gedeelte van de engine gratis gebruikt kan worden\footnote{\url{https://unity3d.com/get-unity}} maar rekening houdend met de interesses van DPI, en eventuele vervolg projecten die zei willen ondernemen, zal de licentie minimaal 75 per maand worden met daar de koste van Android builds bij.
+Unity heeft een educatie licentie waaronder het grootste gedeelte van de engine gratis gebruikt kan worden\footnote{\url{https://unity3d.com/get-unity}} maar rekening houdend met de interesses van DPI, en eventuele vervolg projecten die zij willen ondernemen, zal de licentie minimaal 75 per maand worden, en daar komen de kosten van Android builds nog bij.
 
 \subsubsection{Oculus en GearVR ondersteuning}
-Van de drie engine’s heeft Unity de meest uitgebreide platform support.\footnote{\url{https://unity3d.com/unity/multiplatform}} Daarnaast is Unity vaak een van de eerste keuzes om nieuwe technieken mee te implementeren.\footnote{\url{https://developer.leapmotion.com/documentation/orion/unity/unity/Unity_Overview.html}} De reden achter deze keuze is het gemak waarop plugins gemaakt kunnen worden en de voordelige / gratis pricing van Unity wat het een populaire keuze maakt voor experimenteren.
+Van de drie engine’s heeft Unity de meest uitgebreide platform support.\footnote{\url{https://unity3d.com/unity/multiplatform}} Daarnaast is Unity vaak een van de eerste keuzes om nieuwe technieken mee te implementeren.\footnote{\url{https://developer.leapmotion.com/documentation/orion/unity/unity/Unity_Overview.html}} De reden voor deze keuze is het gemak waarop plugins gemaakt kunnen worden en de voordelige / gratis pricing van Unity wat het een populaire keuze maakt voor experimenteren.
 
 \subsubsection{Virtual Scripting}
-Unity heeft zelf niet een ingebouwd \gls{vs} systeem maar via een aantal plugins kan dit wel worden toegevoegd. Deze plugins zitten wel vast aan de limitaties van een Unity plugin. Daarnaast word dit niet officieel gesupporterd door Untiy zelf.
+Unity heeft zelf niet een ingebouwd \gls{vs} systeem maar via een aantal plugins kan dit wel worden toegevoegd. Deze plugins zitten wel vast aan de limitaties van een Unity plugin. Daarnaast wordt dit niet officieel gesupporterd door Untiy zelf.
 
 \subsubsection{Gebruiksgemak}
-Op gebruiksgemak, in serieuze projecten, fidelity en performance loopt Unity ver achter op de \gls{ue4} en CRYENGINE. Onderhoudbaar en uitbreidbaarheid van Unity is meestal rampzalig door de manier waarop code voor Unity geschreven moet worden. 
+Op gebruiksgemak, in serieuze projecten, fidelity en performance loopt Unity ver achter op de \gls{ue4} en CRYENGINE. Onderhoudbaarheid en uitbreidbaarheid van Unity is meestal rampzalig door de manier waarop code voor Unity geschreven moet worden. 
 
-Het programmeren word namelijk in een component style in c-sharp gedaan. Het programmeren in c-sharp is voor veel mensen fijn omdat dit vaak een bekende taal is. Maar het component systeem en de manier waarop Unity relaties en state afhandelt zorgt dat er extreem snel spaghetti code ontstaat. 
+Het programmeren wordt namelijk in een component style in c-sharp gedaan. Het programmeren in c-sharp is voor veel mensen fijn omdat dit vaak een bekende taal is. Maar het component systeem en de manier waarop Unity relaties en state afhandelt zorgt dat er extreem snel spaghetti code ontstaat. 
 
 \subsection{CRYENGINE}
 \subsubsection{Licentie}
-De CRYENGINE licentie bestaat uit een “Pay what you want” model.\footnote{\url{https://www.cryengine.com/get-cryengine}} Daarnaast beid Crytek een “CRYENGINE Insider Membership“ aan voor 50 of 150.\footnote{\url{https://www.cryengine.com/get-CRYENGINE/service-packages}} 
+De CRYENGINE licentie bestaat uit een “Pay what you want” model.\footnote{\url{https://www.cryengine.com/get-cryengine}} Daarnaast bied Crytek een “CRYENGINE Insider Membership“ aan voor 50 of 150.\footnote{\url{https://www.cryengine.com/get-CRYENGINE/service-packages}} 
 
 \subsubsection{Oculus en GearVR ondersteuning}
 Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet de GearVR.\footnote{\url{https://www.cryengine.com/features/platforms}} Android ondersteuning is mogelijk maar niet officieel ondersteund door Crytek. Dit zal het lastig maken om GearVR te ondersteunen.
@@ -47,28 +47,26 @@ Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet de 
 De CRYENGINE heeft een ingebouwd \gls{vs} systeem genaamd Flow.\footnote{\url{http://docs.cryengine.com/display/SDKDOC2/Flow+Graph+Editor}} Dit systeem heeft helaas geen ondersteuning voor overerving en de koppeling met c++ bestaat alleen uit het maken van nieuwe nodes en het aanspreken van graphs in c++.
 
 \subsubsection{Gebruiksgemak}
-De CRYENGINE staat bekend als een moeilijke Engine om in te beginnen maar heeft ondertussen bewezen een goede keuze te zijn voor game ontwikkelaars en grotere teams.\footnote{\url{https://en.wikipedia.org/wiki/List_of_CryEngine_games}}
-
-Door het gebrek aan persoonlijke ervaring kan ik hier minder over zeggen. Maar door het gebrek aan GearVR ondersteuning is er hier niet meer in verdiept.
+De CRYENGINE staat bekend als een moeilijke engine om in te beginnen maar heeft ondertussen bewezen een goede keuze te zijn voor game ontwikkelaars en grotere teams.\footnote{\url{https://en.wikipedia.org/wiki/List_of_CryEngine_games}}
 
 \subsection{Unreal Engine 4}
 \subsubsection{Licentie}
 Het gebruik van de \gls{ue4} is compleet gratis voor educatie en niet-game applicaties zoals architectuur, visualisatie, films etc.\footnote{\url{https://www.unrealengine.com/what-is-unreal-engine-4}} Dit betekend dat zowel tijdens het afstuderen als mogelijke vervolg projecten van DPI er geen licentie kosten betaald hoeven te worden.
 
 \subsubsection{Oculus en GearVR ondersteuning}
-\gls{ue4} ondersteund zowel de Oculus als Gear VR.\footnote{\url{https://www.unrealengine.com/vr-page}} Daarnaast ondersteund het ook de meeste randapparatuur voor \gls{vr} zoals Leap Motion en Kinect. Updates hiervoor komen vaak wel later dan voor Unity.
+\gls{ue4} ondersteunt zowel de Oculus als Gear VR.\footnote{\url{https://www.unrealengine.com/vr-page}} Daarnaast ondersteunt het ook de meeste randapparatuur voor \gls{vr} zoals Leap Motion en Kinect. Updates hiervoor komen vaak wel later dan voor Unity.
 
 \subsubsection{Visual Scripting}
-Unreal heeft een uitgebreid \gls{vs} systeem wat nauw samenwerkt met c++.\footnote{\url{https://docs.unrealengine.com/latest/INT/Engine/Blueprints/GettingStarted/index.html}} Alle functies die in c++ beschikbaar zijn zijn beschikbaar via Blueprints. Van elke Blueprint kan ook direct de source code ingesprongen worden, zelfs voor de functies uit de \gls{ue4} libraries.
+Unreal heeft een uitgebreid \gls{vs} systeem wat nauw samenwerkt met c++.\footnote{\url{https://docs.unrealengine.com/latest/INT/Engine/Blueprints/GettingStarted/index.html}} Alle functies die in c++ beschikbaar zijn, zijn beschikbaar via Blueprints. Van elke Blueprint kan ook direct de source code ingesprongen worden, zelfs voor de functies uit de \gls{ue4} libraries.
 
 Het koppelen van c++ aan Blueprints is vrij simpel en ondersteund ook het creëren van events in c++ en functionaliteit hieraan via Blueprints te koppelen.
 
 \subsubsection{Gebruiks gemak}
-De leer curve van \gls{ue4} is redelijk stijl maar binnen een paar weken is het mogelijk de belangrijkste te leren. Een punt om rekening mee te houden is dat het zomaar iets maken in de \gls{ue4} vaak verkeerd uitpakt. Daarom is het belangrijk de documentatie, van het onderdeel waar je mee bezig bent, goed te lezen.
+De leer curve van \gls{ue4} is redelijk steil maar binnen een paar weken is het mogelijk het belangrijkste te leren. Een punt om rekening mee te houden is dat het zomaar iets maken in de \gls{ue4} vaak verkeerd uitpakt. Daarom is het belangrijk de documentatie, van het onderdeel waar je mee bezig bent, goed te lezen.
 
 Als de basis principes eenmaal onder de knie zijn kan er extreem snel ontwikkeld, en geprototyped, worden met de \gls{ue4} door de implementatie van \gls{vs} en een strakke en goed uitgedachte UI.
 
 \section{Conclusie}
-De CRYENGINE valt af vanwege zijn gebrek aan GearVR support. Dan blijft de keuze over tussen Unity en \gls{ue4}. Untiy heeft een minder style learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. 
+De CRYENGINE valt af vanwege zijn gebrek aan GearVR support. Dan blijft de keuze over tussen Unity en \gls{ue4}. Untiy heeft een minder steile learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. 
 
-Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen beid het visuele scripting systeem van \gls{ue4} wel deze mogelijkheden.
+Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen bied het visuele scripting systeem van \gls{ue4} wel deze mogelijkheden.

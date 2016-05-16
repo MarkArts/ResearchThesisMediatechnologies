@@ -3,39 +3,39 @@
 \label{ch:onderzoek}
 \lhead{\emph{Onderzoek}}
 
-In dit hoofdstuk word antwoord gegeven op de volgende vragen door middel van de onderzoeksmethoden beschreven in~\ref{subsec:onderzoeksmethoden}
+In dit hoofdstuk wordt antwoord gegeven op de volgende vragen door middel van de onderzoeksmethoden beschreven in~\ref{subsec:onderzoeksmethoden}
 
 \begin{itemize}
-\item Wat is de huidige kennis van computer logica onder de werknemers van DPI?
-\item Is er extra training nodig om met de ontwikkel omgeving aan de slag te gaan?
+\item Wat is de huidige kennis van computerlogica onder de werknemers van DPI?
+\item Is er extra training nodig om met de ontwikkelomgeving aan de slag te gaan?
 \item Welke componenten zullen gemaakt moeten worden?
 	\begin{itemize}
-	\item Wat zijn de huidige taken van een programmeer in het maken van een virtuele omgeving?
-	\item Welke tools bestaan er all?
+	\item Wat zijn de huidige taken van een programmeur bij het maken van een virtuele omgeving?
+	\item Welke tools bestaan er al?
 	\item Wat zijn de juiste abstracties van de componenten? 
 	\end{itemize}
 \item Is het mogelijk de componenten cross-platform te maken?
 	\begin{itemize}
 	\item Welke platformen zijn relevant?
-	\item Wat zijn de verschillende mogelijkheden van deze platformen?
+	\item Wat zijn de verschillende mogelijkheden van deze platforms?
 	\end{itemize}
 \end{itemize}
 
-\section{Wat is de huidige kennis van computer logica onder de werknemers van DPI?}
-Om een idee te krijgen van de huidige kennis van de niet-programmeurs is er begonnen met een enquête over programmeur terminologie \ref{appendix:oreintatieintervieuw:enquete} en een interview over vorige werk ervaring \ref{appendix:oreintatieintervieuw:interview}. 
+\section{Wat is de huidige kennis van computerlogica onder de werknemers van DPI?}
+Om een idee te krijgen van de huidige kennis van de niet-programmeurs is er begonnen met een enquête over programmeur terminologie \ref{appendix:oreintatieintervieuw:enquete} en een interview over vorige werk ervaringen. \ref{appendix:oreintatieintervieuw:interview}. 
 
-De enquête schep een goed beeld van hoe diep de vorige programmeur ervaring van de niet-programmeurs is. De correcte terminologie weten van een onderwerp toont namelijk aan dat niet-programmeur niet alleen ergens mee gewerkt heeft maar bewust kennis heeft gedeeld of gezocht heeft. 
+De enquête schept een goed beeld over hoe groot de vorige programmeur-ervaring van de niet-programmeurs is. De correcte terminologie weten van een onderwerp toont namelijk aan dat de niet-programmeur naast het ergens mee werken ook bewust kennis heeft gedeeld of gezocht.
 
-Uit de enquête en het interview blijkt dat er naast een klein aantal hobby projecten geen kennis is van programmeren. Wel is er ervaring met 3D software wat het begin met \gls{ue4} makkelijker zal maken en er sneller gefocust kan worden op het logica aspect.
+Uit de enquête en het interview blijkt dat er naast een klein aantal hobby projecten geen kennis is van programmeren. Wel is er ervaring met 3D software wat het werken in het begin met \gls{ue4} makkelijker zal maken en er sneller gefocust kan worden op het logica aspect.
 
-\section{Is er extra training nodig om met de ontwikkel omgeving aan de slag te gaan?}
-Omdat er geen kennis is over het Blueprint systeem van \gls{ue4} of eerder contact met programmeren is er besloten om een aantal workshops te geven waarin de niet-programmeurs de basis kennis van Blueprints leren.
+\section{Is er extra training nodig om met de ontwikkelomgeving aan de slag te gaan?}
+Omdat er geen kennis is over het Blueprint systeem van \gls{ue4} of eerder contact is geweest met programmeren, is er besloten om een aantal workshops te geven waarin de niet-programmeurs de basis kennis van Blueprints leren.
 
 In de eerste workshop \ref{appendix:workshop1} is er een introductie gemaakt in de \gls{ue4} en Blueprints. Omdat de niet-programmeurs van een 3D modelling achtergrond komen zijn de verschillen in best practises tussen een game engine en 3d software benadrukt.
 
-In de tweede workshop \ref{appendix:workshop2} krijgen de niet-programmeurs uitleg over Blueprints in de VRInteractions plugin en maken zie zelfstandig een opdracht, zie hoofdstuk~\ref{ch:vrinteractions}. 
+In de tweede workshop \ref{appendix:workshop2} krijgen de niet-programmeurs uitleg over Blueprints in de VRInteractions plugin en maken zij zelfstandig een opdracht, zie hoofdstuk~\ref{ch:vrinteractions}. 
 
-In de derde workshop \ref{appendix:workshop3} word er een complexe opdracht gemaakt en word er verwacht dat de niet-programmeurs zelfstandig problemen kunnen oplossen.
+In de derde workshop \ref{appendix:workshop3} wordt er een complexe opdracht gemaakt en wordt er verwacht dat de niet-programmeurs zelfstandig problemen kunnen oplossen.
 
 \section{Welke componenten zullen gemaakt moeten worden?}
 De componenten zijn gebaseerd op de problemen die de niet-programmeurs tegen komen tijdens het maken en opzetten van \gls{vr} omgevingen. DPI heeft eerder een volledige \gls{vr} ervaring gemaakt in Unity maar deze was niet interactief en gaf weinig input voor het kiezen van componenten. 
@@ -53,12 +53,12 @@ Tijdens het schrijven van de scriptie zijn de volgende \gls{vr} omgevingen gemaa
 
 Op basis van de functionaliteit en problemen van deze projecten is de VRInteractions plugin ontwikkeld.
 
-\subsection{Wat zijn de huidige taken van een programmeer in het maken van een Virtuele omgeving?}
-DPI focust zich voornamelijk op het maken van exposities in \gls{vr}. Een voorbeeld van een use-case is een opstelling op een beurs vervangen met een \gls{vr} omgeving.
+\subsection{Wat zijn de huidige taken van een programmeur in het maken van een Virtuele omgeving?}
+DPI focust zich voornamelijk op het maken van exposities in \gls{vr}. Een voorbeeld van een use-case is een opstelling op een beurs vervangen door een \gls{vr} omgeving.
 
-Om de omgeving in te stellen, te starten of te navigeren word een menu gebruikt waarin de gebruiker opties kan kiezen. Daarnaast word er tijdens de demo zelf interactie gebruikt voor een "wow factor" en op een engaging manier informatie te tonen. 
+Om de omgeving in te stellen, te starten of om in de omgeving te navigeren wordt een menu gebruikt waarin de gebruiker opties kan kiezen. Daarnaast wordt er tijdens de demo zelf interactie gebruikt om een "wow factor" te creëren en op een engaging manier informatie te tonen. 
 
-De taken van een programmeur komen in de meeste exposities neer op
+De taken van een programmeur komen in de meeste exposities neer op:
 
 \begin{itemize}
 	\item Opzetten van het project
@@ -66,14 +66,14 @@ De taken van een programmeur komen in de meeste exposities neer op
 	\item Programmeren van de triggers voor animaties 
 \end{itemize}
 
-\subsection{Welke tools bestaan er all?}
+\subsection{Welke tools bestaan er al?}
 \dots
 \subsection{Wat zijn de juiste abstracties van de componenten?}
 \dots
 
 \section{Is het mogelijk de componenten cross-platform te maken?}
 \dots
-\subsection{Welke platformen zijn relevant?}
+\subsection{Welke platforms zijn relevant?}
 \dots
-\subsection{Wat zijn de verschillende mogelijkheden van deze platformen?}
+\subsection{Wat zijn de verschillende mogelijkheden van deze platforms?}
 \dots

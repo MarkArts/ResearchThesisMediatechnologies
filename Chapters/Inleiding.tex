@@ -4,13 +4,13 @@
 
 In een periode van 18 weken is er geprobeerd een reeks van basis componenten voor de \gls{ue4} te ontwikkelen waarmee niet-programmeurs efficiënt interactie aan \gls{vr} demo’s kunnen toevoegen.
 
-De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica makkelijk uit te drukke, zie hoofdstuk~\ref{ch:visualscripting}. Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
+De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica eenvoudig uit te drukken, zie hoofdstuk~\ref{ch:visualscripting}. Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
 
 \section{Probleemstelling}
 
 Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeer taak omdat er nog geen interactie standaard is en elke hardware andere input gebruikt. Het is daardoor ook lastig om de geprogrammeerde logica te hergebruiken in een ander project. Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. 
 
-In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van deze afhankelijkheid van programmeurs af te komen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruikt van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
+In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van deze afhankelijkheid van programmeurs af te komen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruik van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
 
 \section{Doelstelling}
 
@@ -35,13 +35,13 @@ Hoe realiseren we een ontwikkel omgeving waarin niet-programmeurs, zoals 3D mode
 \item Welke componenten zullen gemaakt moeten worden?
 	\begin{itemize}
 	\item Wat zijn de huidige taken van een programmeer in het maken van een virtuele omgeving?
-	\item Welke tools bestaan er all?
+	\item Welke tools bestaan er al?
 	\item Wat zijn de juiste abstracties van de componenten? 
 	\end{itemize}
 \item Is het mogelijk de componenten cross-platform te maken?
 	\begin{itemize}
-	\item Welke platformen zijn relevant?
-	\item Wat zijn de verschillende mogelijkheden van deze platformen?
+	\item Welke platforms zijn relevant?
+	\item Wat zijn de verschillende mogelijkheden van deze platforms?
 	\end{itemize}
 \end{itemize}
 
@@ -54,18 +54,18 @@ De hoeveelheid abstractie van de componenten zijn afhankelijk van de bestaande i
 
 Als eerst zal er onderzocht moeten worden wat de huidige kennis is van de niet-programmeurs. Dit kan door middel van interviews en een aantal vragen.
 
-Vervolgens zal er onderzocht moeten worden wat een haalbaar moeilijkheidsgraad is en of er baat is van een extra training voor de niet-programmeurs.
+Vervolgens zal er onderzocht moeten worden wat een haalbare moeilijkheidsgraad is en of er baat is bij een extra training voor de niet-programmeurs.
 
 Als er sprake is van toegevoegde waarde van een extra training dan zal deze parallel aan het project gegeven worden en iteratief ontwikkeld.
 
 \subsubsection{Welke componenten zullen gemaakt moeten worden?}
-Dit zal beginnen met een onderzoek naar de huidige taken vaan programmeur tijdens het maken van een virtuele reality omgeving. Aan de hand hiervan zal er gekeken worden welke taken geautomatiseerd kunnen worden of versimpeld naar \gls{vs}.
+Dit zal beginnen met een onderzoek naar de huidige taken van de programmeur tijdens het maken van een virtuele reality omgeving. Aan de hand hiervan zal er gekeken worden welke taken geautomatiseerd kunnen worden of versimpeld naar \gls{vs}.
 
 Als er een duidelijk beeld is van de benodigde componenten zal er een onderzoek gedaan worden naar bestaande tools die ingezet kunnen worden om de workflow te verbeteren.
 
-Als het duidelijk is welke componenten zelf geschreven moeten worden en hoeverre de niet-programmeurs met \gls{vs} om kunnen gaan kan er bepaald worden welke abstractie de componenten zo breed inzet baar mogelijk houd terwijl het intuïtief blijft voor de niet-programmeurs
+Als het duidelijk is welke componenten zelf geschreven moeten worden en hoeverre de niet-programmeurs met \gls{vs} om kunnen gaan kan er bepaald worden welke abstractie de componenten zo breed inzetbaar mogelijk houdt terwijl het intuïtief blijft voor de niet-programmeurs
 
 \subsubsection{Is het mogelijk de componenten cross-platform te maken?}
-Er zal hier onderzocht moeten worden welke platformen relevant zijn en wat de mogelijkheden voor elk platform is.
+Er zal hier onderzocht moeten worden welke platforms relevant zijn en wat de mogelijkheden voor elk platform is.
 
 Er zal daarna een beslissing gemaakt moeten worden voor elk component of het een alternatieve versie moet hebben of dat cross-platform in het component zelf meegenomen kan worden.
