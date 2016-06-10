@@ -2,18 +2,19 @@
 \chapter{Unreal Engine 4}
 \lhead{\emph{Unreal Engine 4}}
 
-In dit hoofdstuk wordt er een vergelijking gemaakt tussen verschillende game engines en wordt de keuze voor \gls{ue4} uitgelegd.
+Om met het onderzoek aan de slag te gaan zal er eerst uitgelegd worden waarom er voor de \gls{ue4} game engine gekozen is. Een engine is namelijk de ontwikkelomgeving, en bevat de tools, die gebruikt word om virtuele werelden te maken. Het is belangrijk dat de gekozen engine ondersteuning heeft voor \gls{vs} en deze genoeg vrijheid geeft voor dit onderzoek.
+
 
 \section{Vergelijking van game engine's}
 
-Tijdens het kiezen van een engine waren er drie rand voorwaarden namelijk 
+Tijdens het kiezen van de engine waren er drie randvoorwaarden, namelijk: 
 \begin{enumerate}
 	\item gratis voor educatie, of goedkoop genoeg voor DPI om aan te schaffen
 	\item Oculus en GearVR ondersteuning
 	\item Een \gls{vs} systeem
 \end{enumerate}
 
-Er is gekeken naar de volgende engine's 
+Er is gekeken naar de volgende engine's die aan de bovenstaande criteria voldoen.
 \begin{itemize}
 \item Unity\footnote{\url{https://unity3d.com}}
 \item CRYENGINE\footnote{\url{https://www.cryengine.com}}
@@ -41,7 +42,7 @@ Het programmeren wordt namelijk in een component style in c-sharp gedaan. Het pr
 De CRYENGINE licentie bestaat uit een “Pay what you want” model.\footnote{\url{https://www.cryengine.com/get-cryengine}} Daarnaast bied Crytek een “CRYENGINE Insider Membership“ aan voor 50 of 150.\footnote{\url{https://www.cryengine.com/get-CRYENGINE/service-packages}} 
 
 \subsubsection{Oculus en GearVR ondersteuning}
-Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet de GearVR.\footnote{\url{https://www.cryengine.com/features/platforms}} Android ondersteuning is mogelijk maar niet officieel ondersteund door Crytek. Dit zal het lastig maken om GearVR te ondersteunen.
+Op het moment van schrijven ondersteund de CRYENGINE wel de Oculus maar niet officieel de GearVR.\footnote{\url{https://www.cryengine.com/features/platforms}} Android ondersteuning is mogelijk maar niet officieel ondersteund door Crytek. Dit zal het lastig maken om GearVR te ondersteunen.
 
 \subsubsection{Visual Scripting}
 De CRYENGINE heeft een ingebouwd \gls{vs} systeem genaamd Flow.\footnote{\url{http://docs.cryengine.com/display/SDKDOC2/Flow+Graph+Editor}} Dit systeem heeft helaas geen ondersteuning voor overerving en de koppeling met c++ bestaat alleen uit het maken van nieuwe nodes en het aanspreken van graphs in c++.
@@ -61,12 +62,14 @@ Unreal heeft een uitgebreid \gls{vs} systeem wat nauw samenwerkt met c++.\footno
 
 Het koppelen van c++ aan Blueprints is vrij simpel en ondersteund ook het creëren van events in c++ en functionaliteit hieraan via Blueprints te koppelen.
 
-\subsubsection{Gebruiks gemak}
+\subsubsection{Gebruiksgemak}
 De leer curve van \gls{ue4} is redelijk steil maar binnen een paar weken is het mogelijk het belangrijkste te leren. Een punt om rekening mee te houden is dat het zomaar iets maken in de \gls{ue4} vaak verkeerd uitpakt. Daarom is het belangrijk de documentatie, van het onderdeel waar je mee bezig bent, goed te lezen.
 
 Als de basis principes eenmaal onder de knie zijn kan er extreem snel ontwikkeld, en geprototyped, worden met de \gls{ue4} door de implementatie van \gls{vs} en een strakke en goed uitgedachte UI.
 
 \section{Conclusie}
-De CRYENGINE valt af vanwege zijn gebrek aan GearVR support. Dan blijft de keuze over tussen Unity en \gls{ue4}. Untiy heeft een minder steile learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om een hoge kwaliteit te behalen. 
+De CRYENGINE valt af vanwege zijn gebrek aan officiële GearVR support. 
 
-Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden. Daar in tegen bied het visuele scripting systeem van \gls{ue4} wel deze mogelijkheden.
+Untiy heeft de minst steile learning curve maar geavanceerde 3D technieken zullen uiteindelijk toch geleerd moeten worden om de kwaliteit te behalen die nodig is voor \gls{vr}. Het visuele scripting systeem van Unity is beperkt en mist de kracht en flexibiliteit die nodig is om deze scriptie succesvol af te ronden.
+
+Het \gls{vs} systeem van \gls{ue4} integreert naadloos met de engine en word door Epic zelf ondersteund en ontwikkeld. Het \gls{vs} systeem is bijna net zo flexibel als het schrijven van code en geeft genoeg vrijheid voor dit onderzoek. Daarnaast ondersteund \gls{ue4} alle grote platformen en de laatste ontwikkeling in render technieken.
