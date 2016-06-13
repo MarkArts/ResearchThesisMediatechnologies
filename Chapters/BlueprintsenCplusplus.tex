@@ -15,7 +15,7 @@
 
 In dit hoofdstuk wordt gameplay logica in drie aspecten verdeeld en wordt voor elk aspect naar de voor en nadelen van C++ en Blueprints gekeken.
 
-Aan de hand van deze vergelijkingen wordt een workflow gekozen voor het programmeren van deze logica waarin wij het beste uit C++ en Blueprints proberen te combineren.
+Aan de hand van deze vergelijkingen wordt een workflow gekozen waarin wij het beste uit C++ en Blueprints proberen te combineren.
 In dit hoofdstuk geven wij antwoord op de vraag "Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs?".
 
 \section{Gameplay}
@@ -74,7 +74,7 @@ void Adpi_unreal_colosseumCharacter::OnDeath(const FDeathReason Reason)
 }
 \end{lstlisting}
 
-We zien hier dat de gerelateerde code op drie verschillende plekken komt te staan, tussen niet relevante code in. Pas na het lezen van de code op deze drie plekken wordt het duidelijk wat de complete functionaliteit is. Er zijn hier natuurlijk hulpmiddelen voor zoals opmerkingen boven code te plaatsen maar bij elke extra taak die, asynchroon, uitgevoerd moet worden wordt de code complexer en moeilijker te begrijpen. De lezer moet namelijk alle gerelateerde functionaliteit in zijn geheugen hebben.
+We zien hier dat de gerelateerde code op drie verschillende plekken komt te staan, tussen niet relevante code in. Pas na het lezen van de code op deze drie plekken wordt het duidelijk wat de complete functionaliteit is. Er zijn hier natuurlijk hulpmiddelen voor zoals opmerkingen boven code plaatsen maar bij elke extra taak die, asynchroon, uitgevoerd moet worden wordt de code complexer en moeilijker te begrijpen. De lezer moet namelijk alle gerelateerde functionaliteit in zijn geheugen hebben.
 
 \subsubsection{Blueprints}
 In Blueprints zou deze logica er als volgt uit zien:
@@ -100,25 +100,24 @@ Een ander groot verschil dat we hier zien is, dat er voor iets simpels als een v
 	\item Macros 
 \end{itemize}
 
-Terwijl in Blueprints al deze concepten verborgen zijn in de nodes. Het verbergen van de onderliggende werking van functionaliteit is een thema dat vaker terugkomt in programmeren en wordt aangemoedigd. Het verbergen van deze logica heeft als gevolg dat er zonder programmeerkennis de wanneer-logica geïmplementeerd kan worden.
+Terwijl in Blueprints al deze concepten verborgen zijn in de nodes. Het verbergen van deze logica heeft als gevolg dat er zonder programmeerkennis de wanneer-logica geïmplementeerd kan worden.
 
 \subsection{Wat}
 
-Het plaatsen van de wat-logica in Blueprints of C++ is lastiger om te bepalen. Voor logica die de niet-programmeurs schrijven is C++ geen optie en moet dit wel in Blueprints maar voor programmeurs moet er een afweging gemaakt worden.
+Het plaatsen van de wat-logica in Blueprints of C++ is een lastigere keuze. Voor logica die de niet-programmeurs schrijven is C++ geen optie en moet dit wel in Blueprints maar voor programmeurs kan er een keuze gemaakt worden.
 
 Het probleem ontstaat voornamelijk bij complexe conditionele logica.
 
 \subsubsection{Conditionele Logica}
 
-Als we de conditionele logica van het afvuren van de events van een.
-LookEventsComponent[zie hoofstuk ?] in C++ en Blueprints met elkaar vergelijken.
+Als we de conditionele logica van het afvuren van de events van een LookEventsComponent in C++ en Blueprints met elkaar vergelijken zijn beide varianten moeilijk te lezen.
 
 \begin{itemize}
 	\item Bijlage 1: Tick functie van de LookEventsComponent \ref{appendix:LookEventsLogicC}
 	\item Bijlage 2: Conditional logic van Tick functie van LookEvents in Blueprints \ref{appendix:LookEventsLogicBlueprints}
 \end{itemize}
 
-zijn beide varianten moeilijk te lezen. Voor iemand die niet codeert ziet de Blueprints variant er waarschijnlijk begrijpgaarder uit maar de complexiteit komt voornamelijk door de logica zelf en in tekstuele code zijn er een aantal manieren om dit soort constructies kleiner te maken zoals:
+Voor iemand die niet codeert ziet de Blueprints variant er waarschijnlijk begrijpgaarder uit maar de complexiteit komt voornamelijk door de logica zelf en in tekstuele code zijn er een aantal manieren om dit soort constructies kleiner te maken zoals:
 
 \begin{lstlisting}[caption=Early return in een complexere if statement in C++]
 if (bActive != true || (bShouldUsedOnce && TimesUsed > 0) || bIsInTimeOut == true) 
@@ -165,7 +164,7 @@ In vergelijking met:
     \caption{Een Blueprint die kijkt of het huidige component geraakt is door een trace.}
 \end{figure}
 
-Voor complexe conditionele logica is C++ sneller te begrijpen en geeft meer mogelijkheden om dit te versimpelen. 
+Voor complexe conditionele logica is C++ sneller te begrijpen en heeft C++ meer mogelijkheden om dit te versimpelen. 
 
 \subsection{Hoe}
 Met de hoe-vraag wordt de interne werking van een functionaliteit bedoelt waaronder ook de integratie met de rest van het programma, denk aan integratie met de rest van de engine, lifecycles, overerving en performance.
@@ -176,19 +175,19 @@ Complexe algoritmes zijn altijd makkelijker in C++ voor zowel leesbaarheid als o
 Naast het schrijven van de logica zijn performance en onderhoud twee onderwerpen die in elk aspect van een spel verwikkeld zijn en daarom ook onderdeel moeten zijn voor onze keuze van workflow.
 
 \subsubsection{Onderhoud}
-Naast een kleine verbetering in leesbaarheid heeft het schrijven van logica in C++ een ander belangrijk voordeel. Namelijk de voordelen van een code editor. Dit geeft uitgebreide debug-, zoek- en meta-informatie. 
+Naast een kleine verbetering in leesbaarheid heeft het schrijven van logica in C++ een ander belangrijk voordeel. Namelijk uitgebreide debug-, zoek- en meta-informatie. 
 
-De error’s die de \gls{ue4} voor je genereerd zijn niet altijd even duidelijk, voornamelijk error’s die pas tijdens het packagen van een project ontstaan, en het vinden van een foutieve Blueprint kan extreem lastig zijn. Bijna elk element in de \gls{ue4} kan Blueprints code bevatten. En elk element op zich kan die Blueprints weer in kleinere elementen verdelen. Deze elementen bevinden zich tussen alle andere soorten assets zoals Meshes, Animaties, Deciscion Trees, Materials, Textures etc en het zoeken van een onbekende fout hierin is extreem lastig.
+De error’s die de \gls{ue4} voor je genereerd zijn niet altijd even duidelijk, voornamelijk error’s die pas tijdens het packagen van een project ontstaan. Het vinden van een foutieve Blueprint kan namelijk extreem lastig zijn. Bijna elk element in de \gls{ue4} kan Blueprints code bevatten en elk element op zich kan die Blueprints weer in kleinere elementen verdelen. Deze elementen bevinden zich tussen alle andere soorten assets zoals Meshes, Animaties, Deciscion Trees, Materials, Textures etc en het zoeken van een onbekende fout hierin is extreem lastig.
 
-Als de foutieve code in C++ had gestaan kan er altijd door middel van een stack trace gekeken worden in welke functie het fout gaat ook kan er gezien worden welke functie die functie aansprak en verder omhoog.
+Als de foutieve code in C++ had gestaan kan er door middel van een stack trace gekeken worden in welke functie het fout gaat.
 
-Het auto aanvullen van functienamen en informatie tonen over functies door middel van de JavaDoc opmerking notatie, versimpelt het schrijven van complexe code die gebruikt maakt van de \gls{ue4}. 
+Daarnaast versimpelt het automatisch aanvullen van functienamen en informatie tonen over functies, door middel van de JavaDoc opmerking notatie, het schrijven van complexe code.
 
 \subsubsection{Performance}
-Een ander belangrijk onderdeel van de hoe-logica is performance. De performance van Blueprints is namelijk lager dan dat van C++. In de "hoe en wat vraag" is dit verschil compleet onmerkbaar maar in de "wat vraag" kan het verschil merkbaar worden.
+Een ander belangrijk onderdeel van de hoe-logica is performance. De performance van Blueprints is namelijk lager dan dat van C++. In de "hoe en wat vraag" is dit verschil onmerkbaar maar in de "wat vraag" kan het verschil merkbaar worden.
 In C++ is er ook veel meer controle over de manier waarop de computer logica interpreteert, in Blueprints is dit een stuk minder duidelijk. Dit zorgt ervoor dat op een lager niveau optimalisaties mogelijk zijn. 
 
-Daarnaast is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbare manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces dat de LookEventsComponents nodig heeft, is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt. Als deze trace dan al eerder door een andere LookEventsComponent berekend is krijgt hij de resultaten van die trace inplaats van een nieuwe trace te maken.
+Ook is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbare manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces dat de LookEventsComponents nodig heeft, is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt. Als deze trace dan al eerder door een andere LookEventsComponent berekend is krijgt hij de resultaten van die trace inplaats van een nieuwe trace te maken.
 
 \section{Labellen en groeperen van functies en opties}
 \label{sec:metadata}
@@ -203,7 +202,7 @@ Om de opties duidelijker te maken gebruiken wij de volgende \gls{ue4} flags op v
 	\item Category
 \end{itemize}
 
-Door gebruik te maken van deze flags kunnen wij variabelen afschermen van de niet-programmeurs. Wij zetten bijvoorbeeld de BlueprintReadOnly flag op het aantal keer dat een event getriggerd is. Dit is een variabel die wij in code willen ophogen maar niet handmatig aanpasbaar willen maken, zie figuur~\ref{fig:advOptiesHidden} en figuur~\ref{fig:advOptiesVisible} voor een ander voorbeeld.
+Door gebruik te maken van deze flags word het mogelijk om variabelen af te schermen van de niet-programmeurs. De BlueprintReadOnly flag word bijvoorbeeld gebruikt op het aantal keer dat een event getriggerd is. Dit is een variabel die wij in code willen ophogen maar niet handmatig aanpasbaar willen maken, zie figuur~\ref{fig:advOptiesHidden} en figuur~\ref{fig:advOptiesVisible} voor een ander voorbeeld.
 
 Voor functies gebruiken wij de volgende \gls{ue4} flags:
 
