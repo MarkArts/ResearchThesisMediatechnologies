@@ -191,6 +191,7 @@ In C++ is er ook veel meer controle over de manier waarop de computer logica int
 Daarnaast is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbare manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces dat de LookEventsComponents nodig heeft, is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt. Als deze trace dan al eerder door een andere LookEventsComponent berekend is krijgt hij de resultaten van die trace inplaats van een nieuwe trace te maken.
 
 \section{Labellen en groeperen van functies en opties}
+\label{sec:metadata}
 Om de opties duidelijker te maken gebruiken wij de volgende \gls{ue4} flags op variabelen:
 
 \begin{itemize}
@@ -215,7 +216,7 @@ Voor functies gebruiken wij de volgende \gls{ue4} flags:
 Door aan te geven welke functies wel en niet aangesproken kunnen worden vanuit Blueprints is het makkelijker om te zien wat er met een element mogelijk is.
 
 \section{Workflow}
-\label{ch:workflow}
+\label{sec:workflow}
 Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag mogelijk houden met zo veel mogelijk vrijheid. Daarnaast is flexibiliteit belangrijk voor het makkelijk en veilig experimenteren en itereren.
 
 Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en wanneer wordt er voor de volgende workflow gekozen.
