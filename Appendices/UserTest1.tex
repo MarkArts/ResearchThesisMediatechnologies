@@ -14,7 +14,7 @@ Aan de hand van afwijkende stappen en vragen die gesteld moesten worden werd een
 Voor de opdracht zal er een Mesh generator gemaakt worden. De generator zal bestaan uit een vierkant met hierin een aantal Meshes die als er lang genoeg naar gekeken wordt een MovableMesh versie van zichzelf zullen spawnen.
 
 \subsection{Omschrijving}
-Maak een Actor met daarin een triggbox die zichtbaar is tijdens het spelen. In de trigger box plaats je een aantal meshes. Als er naar een mesh gekeken wordt zal deze beginnen met ronddraaien en uiteindelijk zal een MovableMesh versie van de mesh gespawnd worden. 
+Maak een Actor met daarin een triggerbox die zichtbaar is tijdens het spelen. In de triggerbox plaats je een aantal meshes. Als er naar een mesh gekeken wordt zal deze beginnen met ronddraaien en uiteindelijk zal een MovableMesh versie van de mesh gespawnd worden. 
 
 \subsection{Optimale oplossing}
 De volgende stappen zijn de benodigde stappen om tot een optimaal resultaat te komen. Onder het optimaal resultaat valt ook best-practises zoals naamgeving, gebruik van functies en geen vragen.
@@ -22,7 +22,7 @@ De volgende stappen zijn de benodigde stappen om tot een optimaal resultaat te k
 Maken van de Actor
 \begin{itemize}
 	\item Maak een nieuwe Actor.
-	\item Voeg een trigger box component toe.
+	\item Voeg een triggerbox component toe.
 		\begin{itemize}
 			\item Verander de "Hidden in Game" setting naar false.
 		\end{itemize} 
@@ -72,5 +72,33 @@ Als de opdracht niet werkend gekregen wordt zonder het ingrijpen van de begeleid
 \section{Uitvoering}
 De uitvoering van de test is gefilmd en is te vinden op de volgende locatie \todo{Link naar videos}
 
+Beide testers waren 2 uur bezig met de opdracht en bij beide testen werd er meerdere malen ingegrepen door de begeleider.
+
+\subsection{Test A}
+Tijdens het begin van test A was er onduidelijkheid over de manier waarop een Actor gemaakt kan worden. Er waren wat hints nodig om duidelijk te maken dat er in de content browser een Actor aangemaakt moest worden.
+
+Tester A wist de correcte structuur van de Actor te maken en begreep zonder uitleg hoe de LookEvents, en de events, geïmplementeerd moesten worden. 
+
+Het eerste momenten dat er ingegrepen moest worden was over onduidelijkheid over de werking van de setVisibility node. Er werd namelijk vanuit gegaan dat de functie altijd een actor zichtbaar zou maken, in plaats van de zichtbaarheid van de actor baseren op de opgegeven Boolean. Het tweede moment van ingrijpen was tijdens het gebruiken van meerdere LookEvents en hoe een LookEvent gekoppeld kon worden aan een component. 
+
+Wat opviel was dat de tester slim gebruik wist te maken van een functie voor herhalende logica, namelijk het verbergen van de menu opties. 
+
+Tijdens het laatste gedeelte was er ook veel onduidelijkheid over de manier waarop een Actor gespawnd kon worden op de juiste locatie. Zelfs na zoeken op het internet kwam de tester er niet zelf uit hoe hij een Actor dynamisch in de wereld kon plaatsen.
+
+Tester A gaf aan het eind aan dat de meeste problemen die hij met Blueprints ervaart komen omdat hij desondanks de lage instap nog steeds moet nadenken als een programmeur. Ook gaf hij aan dat hij het erg lastig vond om met Blueprints te werken als hij dit een tijd niet had gedaan, in dit geval twee weken.
+
+\subsection{Test B}
+Tester B wist sneller op te starten maar kwam al snel vast op de manier waarop events werken in Blueprints. Zo probeerde hij het instellen van de LookEvents component te laten gebeuren tijdens een van de events hiervan, wat zou zorgen dat de LookEvents pas correct ingesteld zouden worden nadat er naar gekeken werd.
+
+Ook was er veel onduidelijkheid over hoe meerdere LookEvents in de zelfde Actor gebruikt konden worden. 
+
+In tegenstelling tot tester A wist tester B wel het spawnen van een Actor werkend te krijgen nadat de werking van de Blueprints events hem werd uitgelegd.
+
+Tester B gaf aan het eind aan dat hij het erg lastig vond om met Blueprints te werken nadat hij dit een tijd niet gedaan had, namelijk drie weken i.v.m. vakantie.
+
 \section{Conclusie}
-\dots
+Omdat er bij beide testers ingegrepen moest worden hebben beide testers een onacceptabel resultaat behaald. Er was bij beide testers onduidelijkheid over de manier waarop Blueprints werkt en er werden foutieve conclusies getrokken die de testers niet zelfstandig wisten op te lossen.
+
+Beide testers gaven aan dat ze het lastig vonden om met Blueprints aan de slag te gaan nadat zij dit een periode niet gedaan hadden. Na uitleg over de correcte werking van een element wisten zie dit element wel succesvol te hergebruiken.
+
+Uit deze test trekken wij de conclusie dat de VRInteractions plugin, en Blueprints zelf, niet intuïtief genoeg werkt voor niet-programmeurs om zonder regelmatige begeleiding.
