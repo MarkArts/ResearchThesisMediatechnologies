@@ -50,10 +50,10 @@ Het programmeren van gameplay in een spel bestaat voor een groot gedeelte uit de
 De vragen “Waarom moet iets gebeuren” en “Waar moet dit gebeuren” komen het meeste voor in de gameplay logica van een spel, vaak hebben deze vragen ook een makkelijk antwoord. Helaas zijn deze vragen lastig om te beantwoorden in tekstuele code.
 
 \subsection{Het afvuren van een projectiel}
-Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld laten wij de logica zien van het schieten van een projectiel in c++ gebaseerd op het standaard voorbeeld van een speler uit de \gls{ue4}.
+Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld laten wij de logica zien van het schieten van een projectiel in C++ gebaseerd op het standaard voorbeeld van een speler uit de \gls{ue4}.
 
 \subsubsection{Tekstuele Implementatie}
-In een c++ header bestand registreren wij de volgende functie in onze speler classe.
+In een C++ header bestand registreren wij de volgende functie in onze speler classe.
 \begin{lstlisting}[caption=Registratie van de OnFire functie]
 void OnFire();
 \end{lstlisting}
@@ -124,4 +124,4 @@ Maar de “Wanneer” vraag is makkelijk te beantwoorden. Namelijk als de fire a
     \caption{Afvuren van een projectiel in Blueprints.}
 \end{figure}
 
-In tegenstelling tot de c++ code is de logica van de “Wanneer” vraag dit maal niet verspreid en is het in een oogopslag duidelijk wat er voor zorgt dat er een projectiel geschoten wordt.
+In tegenstelling tot de C++ code is de logica van de “Wanneer” vraag dit maal niet verspreid en is het in een oogopslag duidelijk wat er voor zorgt dat er een projectiel geschoten wordt.

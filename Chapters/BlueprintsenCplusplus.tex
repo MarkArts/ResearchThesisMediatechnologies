@@ -20,7 +20,7 @@ In dit hoofdstuk geven wij antwoord op de vraag "Hoe kan er een koppeling met \g
 
 \section{Gameplay}
 
-Om de scheiding tussen c++ en Blueprints concreet te maken verdelen wij gameplay logica in de volgende vragen:
+Om de scheiding tussen C++ en Blueprints concreet te maken verdelen wij gameplay logica in de volgende vragen:
 
 \begin{itemize}
 	\item Wanneer moet iets gebeuren
@@ -120,7 +120,7 @@ LookEventsComponent[zie hoofstuk ?] in C++ en Blueprints met elkaar vergelijken.
 
 zijn beide varianten moeilijk te lezen. Voor iemand die niet codeert ziet de Blueprints variant er waarschijnlijk begrijpgaarder uit maar de complexiteit komt voornamelijk door de logica zelf en in tekstuele code zijn er een aantal manieren om dit soort constructies kleiner te maken zoals:
 
-\begin{lstlisting}[caption=Early return in een complexere if statement in c++]
+\begin{lstlisting}[caption=Early return in een complexere if statement in C++]
 if (bActive != true || (bShouldUsedOnce && TimesUsed > 0) || bIsInTimeOut == true) 
 {
 	return;
@@ -215,6 +215,7 @@ Voor functies gebruiken wij de volgende \gls{ue4} flags:
 Door aan te geven welke functies wel en niet aangesproken kunnen worden vanuit Blueprints is het makkelijker om te zien wat er met een element mogelijk is.
 
 \section{Workflow}
+\label{ch:workflow}
 Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag mogelijk houden met zo veel mogelijk vrijheid. Daarnaast is flexibiliteit belangrijk voor het makkelijk en veilig experimenteren en itereren.
 
 Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en wanneer wordt er voor de volgende workflow gekozen.
@@ -255,4 +256,6 @@ Versie controle is een belangrijk onderdeel in samen werken aan code en speelt e
 Tijdens de interviews[?] werd het duidelijk dat er geen bestaande kennis van versie controle aanwezig was in de visuele teams van DPI. Het kiezen, opzetten en leren van versie controle en de integratie hiervan met de \gls{ue4} valt buiten de scope van deze scriptie.
 
 \section{Conclusie}
-Door de gameplay logica te verdelen in Hoe, Wat en Waar hebben wij richtlijnen opgesteld voor het implementeren van gameplay. Voor de wanneer-vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat. Voor de hoe-vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. Voor de wat-vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. Met deze richtlijnen raden wij de workflow aan getoond in figuur~\ref{fig:workflow}
+Door de gameplay logica te verdelen in Hoe, Wat en Waar hebben wij richtlijnen opgesteld voor het implementeren van gameplay. Voor de wanneer-vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat. Voor de hoe-vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. Voor de wat-vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. 
+
+Door deze workflow aan te houden en bewust gebruik te maken van de mogelijke metadata flags op functies en variabelen maken wij een zo intuïtief mogelijke koppeling tussen C++ en Blueprints.

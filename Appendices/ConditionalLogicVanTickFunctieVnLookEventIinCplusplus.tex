@@ -16,13 +16,11 @@ void ULookEventsComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 
 	FHitResult HitResult = WasHitByTrace(Trace());
 
-	// TODO: This should be a proppert check if the HitResult was a hit 
 	if (HitResult.Actor.IsValid())
 	{
 
 		if (bIsInUnSeenDelay) 
 		{
-			// If we are in a un seen delay we should clear the handler and pretend it never happend
 		}
 
 		if (!bIsInSeenDelay) 
