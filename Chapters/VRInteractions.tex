@@ -52,8 +52,7 @@ De VRInteractionsFlyTroughGameMode is een gestripte versie van de VRInteractions
 Deze gamemode is bedoelt voor VR projecten waarin de speler met behulp van Matinee rondvliegt.
 
 \section{Characters}
-De VRInteractionsCharacters bevatten alle beweging- en camera instellingen zoals ooghoogte. De instellingen zijn gebaseerd op de \gls{vr} guidelines van Epic \href{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html#vrcharactersettings}{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html}.
-\todo{Fix link styling}
+De VRInteractionsCharacters bevatten alle beweging- en camera instellingen zoals ooghoogte. De instellingen zijn gebaseerd op de \gls{vr} guidelines van Epic\footnote{\href{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html}{https://docs.unrealengine.com/latest/INT/Platforms/VR/ContentSetup/index.html} }.
 
 
 \subsection{VRInteractionBaseCharacter}
@@ -91,8 +90,7 @@ De \gls{hud} is afhankelijk van de VRInteractionsDataSingleton. Om te zorgen dat
 \section{LookEventsComponent}
 De LookEventsComponent vuurt events af op het moment dat er naar de opgegeven trigger gekeken word. Het is mogelijk om meerdere LookEventsComponents aan dezelfde actor toe te voegen waardoor onder andere menu's op basis van kijken gemaakt kunnen worden.
 
-De LookEventsComponent is de basis van de plugin en bijna alle nadere componenten zijn hierop gebaseerd. Interfaces op basis van kijken zijn makkelijk te gebruiken[?]~\todo{Should i source this?} en zijn compatibel met elke \gls{vr} bril.
-
+De LookEventsComponent is de basis van de plugin en bijna alle nadere componenten zijn hierop gebaseerd. 
 
 \subsection{Implementatie}
 Voor een aantal weken zijn de LookEvents als zowel een Actor als een Component geïmplementeerd. Het voordeel van een Actor implementatie is dat er vanuit world editor in het rechter muisknop menu event's gekoppeld kunnen worden.
@@ -128,7 +126,7 @@ Er kan op twee manieren logica aan een event gekoppeld worden. De eerste is via 
     \label{fig:ComponentReferenceAsign}
 \end{figure}
 
-Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs terwijl voor manier twee wel uitleg nodig was~\todo{Reference naar user tests}.
+Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs terwijl voor manier twee wel uitleg nodig was, in de tweede workshop bijlage~\ref{appendix:workshop2}.
 
 \subsection{Instelling}
 De volgende instellingen zijn mogelijk voor de LookEventsComponent:
@@ -231,7 +229,7 @@ Helaas maakt dit het gebruik van het CircleMenu in een Actor omslachtig. Er moet
     \caption{Het koppelen van het instellen van een event in een CircleMenu als ChildActor component.}
 \end{figure}
 
-Deze omslachtigere manier van event koppeling vergt beter kennis van Blueprints en werd als onduidelijk ervaren door de niet-programmeurs \todo{reference workshop}. 
+Deze omslachtigere manier van event koppeling vergt beter kennis van Blueprints en werd als onduidelijk ervaren door de niet-programmeurs.
 
 \section{VRMovableMesh}
 De VRMovableMesh is een Actor die verplaatsbaar is door middel van een interactie knop en het kijken naar de bestemming. Het object wordt versleept naar de locatie waar naar gekeken wordt zolang men een knop indrukt.
