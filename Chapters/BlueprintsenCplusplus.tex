@@ -16,6 +16,7 @@
 In dit hoofdstuk wordt gameplay logica in drie aspecten verdeeld en wordt voor elk aspect naar de voor en nadelen van C++ en Blueprints gekeken.
 
 Aan de hand van deze vergelijkingen wordt een workflow gekozen voor het programmeren van deze logica waarin wij het beste uit C++ en Blueprints proberen te combineren.
+In dit hoofdstuk geven wij antwoord op de vraag "Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs?".
 
 \section{Gameplay}
 
@@ -38,10 +39,10 @@ Om het verschil tussen asynchrone logica in C++ en Blueprints duidelijk te maken
 We registeren eerst een functie die aangesproken kan worden door de timeout en het geluid wat afgespeeld wordt in de header van de character.
 
 \begin{lstlisting}[caption=Registratie van de timeout functie en het geluid]	
-/** Plays a sound x seconds after the death of the player*/
+// Plays a sound x seconds after the death of the player
 void AfterDeathSoundTimeOut();
 
-/** Sound to play each time we fire */
+// Sound to play each time we fire
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 class USoundBase* DeathSound;
 \end{lstlisting}
@@ -96,7 +97,7 @@ Een ander groot verschil dat we hier zien is, dat er voor iets simpels als een v
 	\item Out parameters (de UnusedHandler)
 	\item Floats
 	\item Types
-	\item Macros. 
+	\item Macros 
 \end{itemize}
 
 Terwijl in Blueprints al deze concepten verborgen zijn in de nodes. Het verbergen van de onderliggende werking van functionaliteit is een thema dat vaker terugkomt in programmeren en wordt aangemoedigd. Het verbergen van deze logica heeft als gevolg dat er zonder programmeerkennis de wanneer-logica geïmplementeerd kan worden.
@@ -189,6 +190,30 @@ In C++ is er ook veel meer controle over de manier waarop de computer logica int
 
 Daarnaast is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbare manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces dat de LookEventsComponents nodig heeft, is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt. Als deze trace dan al eerder door een andere LookEventsComponent berekend is krijgt hij de resultaten van die trace inplaats van een nieuwe trace te maken.
 
+\section{Labellen en groeperen van functies en opties}
+Om de opties duidelijker te maken gebruiken wij de volgende \gls{ue4} flags op variabelen:
+
+\begin{itemize}
+	\item VisibleDefaultsOnly
+	\item VisibleAnywhere
+	\item EditAnywhere
+	\item BlueprintReadOnly
+	\item BlueprintReadWrite
+	\item Category
+\end{itemize}
+
+Door gebruik te maken van deze flags kunnen wij variabelen afschermen van de niet-programmeurs. Wij zetten bijvoorbeeld de BlueprintReadOnly flag op het aantal keer dat een event getriggerd is. Dit is een variabel die wij in code willen ophogen maar niet handmatig aanpasbaar willen maken, zie figuur~\ref{fig:advOptiesHidden} en figuur~\ref{fig:advOptiesVisible} voor een ander voorbeeld.
+
+Voor functies gebruiken wij de volgende \gls{ue4} flags:
+
+\begin{itemize}
+	\item BlueprintCallable
+	\item BlueprintProtected
+	\item Category
+\end{itemize}
+
+Door aan te geven welke functies wel en niet aangesproken kunnen worden vanuit Blueprints is het makkelijker om te zien wat er met een element mogelijk is.
+
 \section{Workflow}
 Voor onze workflow willen wij de complexiteit voor de niet-programmeurs zo laag mogelijk houden met zo veel mogelijk vrijheid. Daarnaast is flexibiliteit belangrijk voor het makkelijk en veilig experimenteren en itereren.
 
@@ -208,7 +233,7 @@ Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en w
 				\node[punktchain, join] (overerving) 		
 					{Blueprints overerving (Blueprints)};
 				\node[punktchain, join] (wanneer) 			
-					{Wanner en wat (Blueprints)};
+					{Wanneer en wat (Blueprints)};
 		\end{tikzpicture}
 	\caption{Workflow voor het programmeren voor de Unreal Engine 4.}
 	\label{fig:workflow}
