@@ -4,9 +4,9 @@
 
 \chapter{Visual Scripting}
 \label{ch:visualscripting}
-In dit hoofdstuk wordt een introductie gegeven van een visuele programmeer taal. Daarna wordt er als voorbeeld een vergelijking gemaakt tussen C++ en een visuele taal.
+In dit hoofdstuk wordt een introductie gegeven van een visuele programmeer taal. Daarna wordt als voorbeeld een vergelijking gemaakt tussen C++ en een visuele taal.
 
-\gls{vs} maakt het mogelijk om logica op een visuele manier in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computer systemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. 
+\gls{vs} maakt het mogelijk om logica op een visuele manier weer te geven in plaats van tekstueel te schrijven. Er is minder kennis van de onderliggende werking van computersystemen nodig dan voor tekstueel programmeren [?]. Hierdoor kan er zonder kennis van computers en hun werking al snel mee gewerkt worden door niet programmeurs. 
 
 \begin{figure}[!ht]
   \centering
@@ -14,10 +14,10 @@ In dit hoofdstuk wordt een introductie gegeven van een visuele programmeer taal.
     \caption{Voorbeeld van een visuele script taal.}
 \end{figure}
 
-Daarnaast worden de mogelijkheden van de visuele programmeer taal ook vaak gelimiteerd om het de gebruiker makkelijker te maken en het programma te beschermen tegen fouten van de gebruiker. Meestal als de limitaties van \gls{vs} een probleem worden had de logica beter in een tekstuele taal geschreven kunnen worden.
+Daarnaast worden de mogelijkheden van de visuele programmeer taal ook vaak gelimiteerd om het de gebruiker makkelijker te maken en het programma te beschermen tegen fouten van de gebruiker. Als de limitaties van \gls{vs} een probleem worden was het vaak beter geweest om toch te kiezen voor een tekstuele taal.
 
 \section{Use Case's}
-Door de jaren heen zijn er voor verschillende doeleinden visuele programmeer talen gemaakt. 
+Door de jaren heen zijn er voor verschillende doeleinden visuele programmeertalen gemaakt. 
 Een aantal voorbeelden zijn:
 
 \begin{itemize}  
@@ -31,7 +31,7 @@ Een aantal voorbeelden zijn:
 In deze scriptie wordt er gefocust op het gebruik van \gls{vr} voor gameplay logica.
 
 \section{Blueprints}
-Blueprints is het visuele scripting systeem van \gls{ue4} en wat deze scriptie mogelijk maakt. De beschrijving van Unreal zelf is als volgt:
+Blueprints is het visuele scripting systeem van \gls{ue4} en heeft de doelstelling van deze scriptie mogelijk gemaakt. De beschrijving van Unreal zelf is als volgt:
 
 “Blueprints are special assets that provide an intuitive, node-based interface that can be used to create new types of Actors and script level events; giving designers and gameplay programmers the tools to quickly create and iterate gameplay from within Unreal Editor without ever needing to write a line of code.”
 
@@ -43,14 +43,14 @@ Blueprints ziet er als volgt uit:
     \caption{Voorbeeld van een Blueprint.}
 \end{figure}
 
-Een hele kort samenvatting zou zijn dat de rode nodes Events zijn en dus aangeven wanneer iets gebeurd, de witte lijnen bepalen de volgorde waarin de nodes worden uitgevoerd, de blauwe nodes zijn functies en de rest zijn variabelen of pure transformatie van data.
+Kort samengevat is dat de rode nodes Events zijn en dus aangeven wanneer iets gebeurd. De witte lijnen bepalen de volgorde waarin de nodes worden uitgevoerd. De blauwe nodes zijn functies terwijl de rest variabelen zijn of pure transformatie van data.
 
 \section{Gameplay Logica}
 Het programmeren van gameplay in een spel bestaat voor een groot gedeelte uit de vragen “Wanneer moet iets gebeuren”, “Wat moet er gebeuren” en “Hoe moet dit gebeuren”.
-De vragen “Waarom moet iets gebeuren” en “Waar moet dit gebeuren” komen het meeste voor in de gameplay logica van een spel, vaak hebben deze vragen ook een makkelijk antwoord. Helaas zijn deze vragen lastig om te beantwoorden in tekstuele code.
+De vragen “Waarom moet iets gebeuren” en “Waar moet dit gebeuren” komen het meeste voor in de gameplay logica van een spel, vaak hebben deze vragen ook een makkelijk antwoord. Maar deze vragen zijn lastig om te beantwoorden in tekstuele code.
 
 \subsection{Het afvuren van een projectiel}
-Een voorbeeld van deze drie vragen in code is als volgt, voor het voorbeeld laten wij de logica zien van het schieten van een projectiel in C++ gebaseerd op het standaard voorbeeld van een speler uit de \gls{ue4}.
+In deze paragraaf wordt een voorbeeld van deze drie vragen uitgewerkt. Het voorbeeld laat de logica zien van het schieten van een projectiel in C++. Dit is gebaseerd op het standaard voorbeeld van een speler uit de \gls{ue4}.
 
 \subsubsection{Tekstuele Implementatie}
 In een C++ header bestand registreren wij de volgende functie in onze speler classe.
@@ -111,7 +111,7 @@ void Adpi_unreal_colosseumCharacter::OnFire()
 
 }
 \end{lstlisting}
-Om de logica te implementeren voor het vuren van de kogel hebben wij nu op vier verschillende plekken de logica moeten verspreiden, hiervan zit de implementatie verspreid in een bestand van 218 regels \ref{appendix:dpi_unreal_colosseumCharacter}.
+Om de logica te implementeren voor het vuren van de kogel is op vier verschillende plekken de logica gebruikt. De implementatie is verspreid in een bestand van 218 regels \ref{appendix:dpi_unreal_colosseumCharacter}.
 
 \subsubsection{Visuele Implementatie}
 De “Hoe moet dit gebeuren” is een complexe vraag die prima beantwoord wordt in code. Vooral omdat er verschillende logica achter elkaar plaatsvindt zoals geluid afspelen / animatie starten, en een aantal wiskundige berekeningen. 

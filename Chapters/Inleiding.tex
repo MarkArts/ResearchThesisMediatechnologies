@@ -4,13 +4,13 @@
 
 In een periode van 18 weken zijn er een reeks van basis componenten voor de \gls{ue4} ontwikkeld met als doel niet-programmeurs efficiënt interactie aan \gls{vr} demo’s te laten toevoegen.
 
-De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica eenvoudig uit te drukken, zie hoofdstuk~\ref{ch:visualscripting}. Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica zelf toe te voegen zonder dat hier een programmeur voor nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
+De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica eenvoudig uit te drukken (zie hoofdstuk~\ref{ch:visualscripting}). Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica toe te voegen zonder dat een programmeur nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
 
 \section{Probleemstelling}
 
-Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeertaak omdat er nog geen interactie standaard aanwezig is en elke hardware andere input gebruikt. Het is daardoor ook lastig om de geprogrammeerde logica te hergebruiken in een ander project. Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. 
+Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeer taak omdat standaard nog geen interactie aanwezig is, en elke hardware weer andere input gebruikt. Het is daardoor lastig om de geprogrammeerde logica te hergebruiken in een ander project. Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. 
 
-In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van de afhankelijkheid van programmeurs af te komen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruik van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
+In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van de afhankelijkheid van programmeurs te verminderen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruik van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
 
 \section{Doelstelling}
 
@@ -22,12 +22,12 @@ Aan het eind van dit traject zal het mogelijk zijn om zonder de hulp van een pro
 
 \subsection{Hoofdvraag}
 
-De hoofdvraag van deze scriptie is: Hoe realiseren we een ontwikkelomgeving waarin niet-programmeurs, zoals 3D modellers en level designers, efficiënt unieke \gls{vr} ervaring kunnen creëren in \gls{ue4}.
+De hoofdvraag van deze scriptie is: Hoe realiseren we een ontwikkelomgeving waarin niet-programmeurs, zoals 3D modellers en level designers, een efficiënte unieke \gls{vr} ervaring kunnen creëren in \gls{ue4}.
 
 \subsection{Deelvragen}
 
 \begin{itemize}  
-\item Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs? 
+\item Hoe kan er een koppeling met Virtual Scripting (\gls{vs}) gemaakt worden die intuïtief is voor niet programmeurs? 
 	\begin{itemize}
 	\item Wat is de huidige kennis van computer logica onder de werknemers van DPI?
 	\item Is er extra training nodig om met de ontwikkel omgeving aan de slag te gaan?
@@ -50,7 +50,7 @@ De hoofdvraag van deze scriptie is: Hoe realiseren we een ontwikkelomgeving waar
 
 \subsubsection{Hoe kan er een koppeling met Virtual Scripting gemaakt worden die intuïtief is voor niet programmeurs?}
 
-De vrijheid en mogelijkheden die de niet-programmeur krijgen, oftewel de abstractie van de componenten, zijn afhankelijk van de bestaande intuïtie voor programmeren. Als een gebruiker bijvoorbeeld snapt hoe de “als dit dan dat” constructie werkt kan er meer vrijheid in de componenten gecreëerd worden. Maar als de gebruiker deze intuïtie niet heeft zal meer vrijheid, abstractie, alleen voor onduidelijkheid zorgen.
+De vrijheid en mogelijkheden die de niet-programmeur krijgen, oftewel de abstractie van de componenten, zijn afhankelijk van de bestaande intuïtie van programmeren. Als een gebruiker bijvoorbeeld snapt hoe de “als dit dan dat” constructie werkt kan er meer vrijheid in de componenten gecreëerd worden. Maar als de gebruiker deze intuïtie niet heeft zal meer vrijheid, abstractie, alleen voor onduidelijkheid zorgen.
 
 In de eerste plaats zal er onderzocht moeten worden wat de huidige kennis is van de niet-programmeurs. Dit kan door middel van interviews en een aantal vragen.
 
@@ -63,9 +63,9 @@ Het onderzoek naar welke componenten gemaakt moeten worden zal beginnen met een 
 
 Als er een duidelijk beeld is van de benodigde componenten zal er een onderzoek gedaan worden naar bestaande tools die ingezet kunnen worden om de workflow te verbeteren.
 
-Als het duidelijk is welke componenten zelf geschreven moeten worden en hoeverre de niet-programmeurs met \gls{vs} om kunnen gaan kan er bepaald worden welke abstractie de componenten zo breed inzetbaar mogelijk houdt terwijl het intuïtief blijft voor de niet-programmeurs
+Als het duidelijk is welke componenten zelf geschreven moeten worden en hoeverre de niet-programmeurs met \gls{vs} om kunnen gaan, kan er bepaald worden welke abstractie de componenten zo breed inzetbaar mogelijk houdt. Met als randvoowaarde dat het intuïtief blijft voor de niet-programmeurs.
 
 \subsubsection{Is het mogelijk de componenten cross-platform te maken?}
 Om te bepalen of het mogelijk is de componenten cross-platform te maken zal er onderzocht worden welke platforms relevant zijn en wat de technische mogelijkheden voor elk platform zijn.
 
-Er zal daarna een beslissing gemaakt moeten worden voor elk component of het een alternatieve versie moet hebben of dat cross-platform in het component zelf meegenomen kan worden.
+Daarna zal voor elke component een beslissing genomen moeten worden of er een alternatieve versie moet komen of dat het cross-platform in de component zelf meegenomen kan worden.

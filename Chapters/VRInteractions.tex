@@ -71,7 +71,7 @@ De VRInteractionCharacter is bedoelt voor spellen waarin de speler op een rails 
 \section{VRInteractionsPlayerController}
 De VRInteractionsPlayerController is gebaseerd op de standaard PlayerController van Epic. De controller is verantwoordelijk voor het correct doorgeven van de input naar de ingestelde Character.
 
-In de controller zorgen wij ook dat de rotatie van de controller klopt met de rotatie van de headset op het moment dat de headset aangezet wordt, zo kan de headset tijdens het spelen aan en uit gezet worden.
+In de controller wordt er ook voor gezorgd dat de rotatie van de controller klopt met de rotatie van de headset op het moment dat de headset aangezet wordt. Zo kan de headset tijdens het spelen aan en uit gezet worden.
 
 \section{VRInteractionsCameraManager}
 De VRInteractionsCameraManager is gebaseerd op de standaard VRInteractionsCameraManager van Epic. Deze Manager is verantwoordelijk voor het instellen van camera instellingen zoals de FOV. 
@@ -101,14 +101,14 @@ Voor een aantal weken zijn de LookEvents als zowel een Actor als een Component g
     \caption{Voorbeeld van het kopellen van een event aan een actor.}
 \end{figure}
 
-Dit heeft als nadeel dat het event direct in het level Blueprint gekoppeld wordt wat aanmoedigt om hier de logica te plaatsen terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
+Dit heeft als nadeel dat het event direct in het level Blueprint gekoppeld wordt wat aanmoedigt om hier de logica te plaatsen, terwijl dit vaak in een Blueprint Actor zou moeten gebeuren.
 
-Ook is het lastig de Actor implementatie binnen een Blueprint Actor te gebruiken, dit kan via een ActorComponent. Het ActorComponent maakt het niet mogelijk om instellingen via de editor te doen en verplicht daardoor om alle settings via Blueprints te zetten, wat omslachtig en fout gevoelig is.
+Ook is het lastig de Actor implementatie binnen een Blueprint Actor te gebruiken. Dit kan via een ActorComponent. Het ActorComponent maakt het niet mogelijk om instellingen via de editor te veranderen en verplicht daardoor om alle settings via Blueprints te zetten, wat omslachtig en fout gevoelig is.
 
 Daarom is er voor de Component implementatie gekozen. Dit maakt het makkelijk om via de Blueprint editor events toe te voegen en kunnen er meerdere LookEvents gebruikt worden. Het is nog steeds mogelijk om een level Blueprint event binnen de actor te maken die gekoppeld is aan het event van de component.
 
 \subsection{Events}
-De koppeling met Blueprints zit zich voornamelijk in de events die afgevuurd worden door de LookEventsComponent. Dit is ook de interface waarmee de niet-programmeurs de interactie kunnen programmeren.
+De koppeling met Blueprints zit voornamelijk in de events die afgevuurd worden door de LookEventsComponent. Dit is ook de interface waarmee de niet-programmeurs de interactie kunnen programmeren.
 
 Er kan op twee manieren logica aan een event gekoppeld worden. De eerste is via het component menu zoals getoond in figuur~\ref{fig:ComponentMenuEvent} en de tweede zoals getoond in figuur~\ref{fig:ComponentReferenceAsign}.
 
@@ -126,7 +126,7 @@ Er kan op twee manieren logica aan een event gekoppeld worden. De eerste is via 
     \label{fig:ComponentReferenceAsign}
 \end{figure}
 
-Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs terwijl voor manier twee wel uitleg nodig was, in de tweede workshop bijlage~\ref{appendix:workshop2}.
+Vooral de eerste manier werd als duidelijk ervaren voor de niet-programmeurs, terwijl voor manier twee wel uitleg nodig was in de tweede workshop (bijlage~\ref{appendix:workshop2}).
 
 \subsection{Instelling}
 De volgende instellingen zijn mogelijk voor de LookEventsComponent:
