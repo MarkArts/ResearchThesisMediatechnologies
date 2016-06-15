@@ -149,9 +149,7 @@ De volgende instellingen zijn mogelijk voor de LookEventsComponent:
 \end{itemize}
 
 \subsubsection{Seen en UnSeen trigger}
-De trigger is het object waar naar gekeken kan worden. Er kan voor zowel het triggeren van het Seen event als voor het triggeren van het UnSeen event een ander object gekozen worden.
-
-Er is hier voor gekozen nadat het duidelijk werd dat er vaak een animatie plaats vind of er extra objecten, bijvoorbeeld een menu, tevoorschijn komen die niet in de originele trigger passen.
+De trigger is het object waar naar gekeken kan worden. Er kan voor zowel het triggeren van het Seen event als voor het triggeren van het UnSeen event een ander object gekozen worden. Deze keus is gemaakt nadat het duidelijk werd dat er vaak een animatie plaatsvind, of er extra objecten (zoals een menu) tevoorschijn komen, die niet in de originele trigger passen.
 
 \begin{figure}[!ht]
   \centering
@@ -176,7 +174,7 @@ Tijdens de workshops werd er aangegeven dat het lastig was om de LookEvents te d
     \caption{Voorbeeld van debug informatie die een LookEvent kan tekenen.}
 \end{figure}
 
-Er wordt een lijn getekend vanaf de speler ter lengte van de TriggerDistance. Vervolgens word er een vierkant getekend rond de active triggers, er kan een kleur voor Actors en voor Components opgegeven worden. Als er een blocking hit is, door een niet doorzichtig object, word er een cirkel getekend met als diameter de TriggerRadius op de plek waar de blocking hit plaats vond.
+Er wordt een lijn getekend vanaf de speler ter lengte van de TriggerDistance. Vervolgens word er een vierkant getekend rond de active triggers, er kan een kleur voor Actors en voor Components opgegeven worden. Als er een blocking hit is, door een niet doorzichtig object, wordt er een cirkel getekend met als diameter de TriggerRadius op de plek waar de blocking hit plaats vond.
 
 \section{CircleMenu}
 Het CircleMenu genereert een menu van LookEventsComponents op basis van een lijst van meshes.
