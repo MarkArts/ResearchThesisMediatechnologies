@@ -94,6 +94,8 @@
 \setcounter{totalnumber}{20}
 \setcounter{dbltopnumber}{9}
 \usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{20AC}{\euro}
+\usepackage{eurosym}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{graphicx}

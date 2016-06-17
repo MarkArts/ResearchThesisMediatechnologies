@@ -1,18 +1,35 @@
 %!TEX root = ../Thesis.tex
-\chapter{Resultaten en Discussie}
+\chapter{Resultaten, Discussie en Vervolgonderzoek}
 \label{ch:resultatenEnDiscussie}
-\lhead{\emph{Resultaten en Discussie}}
+\lhead{\emph{Resultaten, Discussie en vervolgonderzoek}}
 
-In dit hoofdstuk word er antwoord gegeven op de deelvragen en worden de resultaten in context geplaatst en besproken.
+In dit hoofdstuk word er antwoord gegeven op de deelvragen en worden de resultaten in context geplaatst en besproken. Als laatste word er ingegaan op mogelijke vervolgstappen.
 
 \section{Resultaten}
 In Hoofdstuk~\ref{ch:BlueprintsEnCpp} is antwoord te geven op de vraag "Hoe kan er een koppeling met \gls{vs} gemaakt worden die intuïtief is voor niet programmeurs?". Met de workflow die in paragraaf~\ref{sec:workflow} uiteen is gezet, zijn de projecten uit paragraaf~\ref{sec:welkeComponenten} ontwikkeld en is antwoord gegeven op de vraag "Welke componenten zullen gemaakt moeten worden?". Namelijk de componenten uit de VRInteractions plugin die besproken is in hoofdstuk~\ref{ch:vrinteractions}. De componenten werken op basis van kijken naar objecten, een interactie vorm die werkt op de platforms die gekozen zijn in paragraaf~\ref{subsec:platforms}, waarmee antwoord gegeven is op de vraag "Is het mogelijk de componenten cross-platform te maken?".
 
-Het gebruiksgemak van de VRInteractions plugin is getest, bijlage~\ref{appendix:usertest1}, na het geven van drie workshops, bijlages~\ref{appendix:workshop1}, \ref{appendix:workshop2} en \ref{appendix:workshop3}. Uit de test bleek dat het niet mogelijk was voor de niet-programmeurs om zelfstandig een complex interactief object te maken met behulp van de VRInteractions plugin.
+Het gebruiksgemak van de VRInteractions plugin is getest, bijlage~\ref{appendix:usertest1}, na het geven van drie workshops, bijlages~\ref{appendix:workshop1}, \ref{appendix:workshop2} en \ref{appendix:workshop3}. Uit de test bleek dat het niet mogelijk was voor de niet-programmeurs om zelfstandig een complex interactief object te maken met behulp van de VRInteractions plugin. Uit de workshops bleek wel dat de niet-programmeurs na een korte uitleg zelfstandig aan de slag konden.
 
 \section{Discussie}
 Alhoewel tijdens de gebruikstest van de VRInteractions plugin een onacceptabele resultaat behaald werd, zijn de opdrachten uit workshop 3 wel succesvol zelfstandig gemaakt. Ook zijn er parallel aan het schrijven van deze scriptie twee projecten met de VRInteractions plugin ontwikkeld door de niet-programmeurs waarbij geen hulp nodig was. Het gaat om een demo in het Colosseum en het menu van een fly-through door het menselijk lichaam. Beide testers gaven aan dat ze een tijd (2 a 3 weken) niet met Blueprints gewerkt hadden en dat ze daarom moeite hadden met de test. 
 
+Tijdens het afstudeer traject zijn de volgende projecten succesvol gemaakt, waarvan twee zoals eerder aangegeven zonder hulp:
+\begin{itemize}
+	\item Een fly-trough door een menselijk lichaam
+	\item Een appartement waarvan o.a. het meubilair en de vloer dynamisch aangepast kon worden
+	\item Een demo van een machine uit een fabriek
+	\item Een virtuele omgeving van een tentoonstelling
+	\item Een leeromgeving rond het Colosseum
+	\item Een demo omgeving van de VRInteractions plugin
+\end{itemize}
+
 Naast het gebruik van de VRInteractions plugin waren er ook een aantal performance problemen in de demo's die niet opgelost konden worden door de niet-programmeurs. Het is wel mogelijk voor niet-programmeurs om zelfstandig interactie toe te voegen aan een 3D omgeving zijn er toch problemen die alleen door een programmeur opgelost kunnen worden.
 
 Uit de behoefte aan hulp voor de niet-programmeurs en het niet kunnen vermijden van problemen die de niet-programmeurs niet zelf kunnen oplossen word er geadviseerd om in een ontwikkelteam minstens een programmeur met 3D ervaring beschikbaar te hebben die complexere problemen kan oplossen en ondersteuning kan geven aan de niet-programmeurs.
+
+\section{Vervolgonderzoek}
+De VRInteractions is ontwikkeld op de tweede dev kit van de Oculus en focust zich voornamelijk op demo's met als einddoel het overdragen van informatie. Er zijn waarschijnlijk cases die niet tijdens het afstudeer traject langs zijn gekomen waar de VRInteractions plugin ook voor ingezet kan worden.
+
+Het aanbod van \gls{vr} headsets is nog steeds aan het groeien en er zijn all een aantal nieuwe technieken die momenteel ontwikkeld worden om de ervaring te verbeteren. Er kan onderzocht worden of de VRInteractions plugin meerwaarde kan hebben op deze headsets.
+
+In deze scriptie is er gefocust op interactie op basis van kijken. Er kan onderzocht worden of er naast deze vorm van interactie ook andere vormen ondersteund kunnen worden door de VRInteractions plugin.

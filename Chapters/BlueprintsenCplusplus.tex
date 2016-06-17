@@ -184,7 +184,7 @@ Als de foutieve code in C++ had gestaan kan er door middel van een stack trace g
 Daarnaast versimpelt het automatisch aanvullen van functienamen en informatie tonen over functies, door middel van de JavaDoc opmerking notatie, het schrijven van complexe code.
 
 \subsubsection{Performance}
-Een ander belangrijk onderdeel van de hoe-logica is performance. De performance van Blueprints is namelijk lager dan dat van C++. In de "hoe en wat vraag" is dit verschil niet meetbaar, maar in de "wat vraag" kan het verschil merkbaar worden.
+Een ander belangrijk onderdeel van de hoe-logica is performance. De performance van Blueprints is namelijk lager dan dat van C++. In de hoe- en wat-vraag is dit verschil niet meetbaar, maar in de wat-vraag kan het verschil merkbaar worden.
 In C++ is er ook veel meer controle over de manier waarop de computer logica interpreteert. In Blueprints is dit een stuk minder duidelijk. Dit zorgt ervoor dat op een lager niveau optimalisaties mogelijk zijn. 
 
 Ook is het makkelijker om complexe optimalisaties te schrijven op een onderhoudbare manier. Als er bijvoorbeeld een performance probleem ontstaat in het aantal raytraces dat de LookEventsComponents nodig heeft, is het mogelijk om een cache te schrijven voor de ray traces waar de LookEventsComponent een trace uit vraagt. Als deze trace dan al eerder door een andere LookEventsComponent berekend is krijgt hij de resultaten van die trace inplaats van een nieuwe trace te maken.
@@ -240,9 +240,9 @@ Gebaseerd op het verdelen van de gameplay logica in de drie vragen hoe, wat en w
 	\label{fig:workflow}
 \end{figure}
 
-Elk component begint als een imperfecte Blueprint logica. In dit stadium is performance en onderhoud niet belangrijk, en hoeft het niet eens compleet functioneel te zijn. Er kan direct geexperimenteerd en getest worden. Dit kan niet alleen waardevolle informatie opleveren voor het design aspect van een project, maar plaats ook de logica in de context van het project. Vaak komt hier gewenste functionaliteit uit die tijdens het bedenken over het hoofd gezien is.
+Elk component begint als een imperfecte Blueprint logica. In dit stadium is performance en onderhoud niet belangrijk, en hoeft het niet eens compleet functioneel te zijn. Er kan direct geëxperimenteerd en getest worden. Dit kan niet alleen waardevolle informatie opleveren voor het design aspect van een project, maar plaats ook de logica in de context van het project. Vaak komt hier gewenste functionaliteit uit die tijdens het bedenken over het hoofd gezien is.
 
-Nadat het duidelijk is dat het component gebruikt gaat worden in het project en de gewenste functionaliteiten duidelijk zij, kan er een fatsoenlijke en efficiënte C++ implementatie geschreven worden.
+Nadat het duidelijk is dat het component gebruikt gaat worden in het project en de gewenste functionaliteiten duidelijk zijn kan er een fatsoenlijke en efficiënte C++ implementatie geschreven worden.
 
 De C++ implementatie wordt vervolgens overerft door een Blueprint die de aanvullende logica toevoegt.
 
@@ -253,7 +253,7 @@ Versie controle is een belangrijk onderdeel van elk ICT project en alhoewel dit 
 
 Versie controle is een belangrijk onderdeel in samen werken aan code en speelt een belangrijke rol in het onderhoud van code. Er zijn tools in \gls{ue4} om versie controle tools zoals git en svn op Blueprints, en assets toe te passen. Voor deze scriptie is de plugin ontwikkeld met behulp van git maar is er niet gekeken naar een manier waarop niet-programmeurs hier ook mee kunnen werken.
 
-Tijdens de interviews[?] werd het duidelijk dat er geen bestaande kennis van versie controle aanwezig was in de visuele teams van DPI. Het kiezen, opzetten en leren van versie controle en de integratie hiervan met de \gls{ue4} valt buiten de scope van deze scriptie.
+Tijdens de interviews, zie bijlage~\ref{appendix:oreintatieintervieuw}, werd het duidelijk dat er geen bestaande kennis van versie controle aanwezig was in de visuele teams van DPI. Het kiezen, opzetten en leren van versie controle en de integratie hiervan met de \gls{ue4} valt buiten de scope van deze scriptie.
 
 \section{Conclusie}
 Door de gameplay logica te verdelen in Hoe, Wat en Waar zijn richtlijnen opgesteld voor het implementeren van gameplay. Voor de wanneer-vraag is Blueprints voor zowel de programmeur als de niet-programmeur altijd de beste optie. Niet alleen is het leesbaarder maar ook flexibeler doordat de logica op een logische manier achter elkaar staat. Voor de hoe-vraag is C++ altijd de beste optie. Onderhoudbaarheid en performance spelen hier een belangrijke rol. Voor de wat-vraag heeft de niet-programmeur geen optie maar de programmeur wel. Voor triviale code kan er gekozen worden voor Blueprints maar voor complexe conditionele logica heeft C++ de voorkeur. 

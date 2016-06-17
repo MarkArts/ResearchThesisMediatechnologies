@@ -3,15 +3,23 @@
 \label{ch:conclusie}
 \lhead{\emph{Conclusie}}
 
-Om het ontwikkelen van interactieve 3D omgevingen mogelijk te maken voor niet-programmeurs is de VRInteractions plugin ontwikkeld. De plugin maakt het mogelijk om met een aantal simpele stappen de omgeving \gls{vr} klaar te maken. Door de \gls{vr} logica in C++ te schrijven en te koppelen aan Blueprints kunnen niet-programmeurs na drie workshops zelfstandig interactie toevoegen. Om de niet-programmeurs te ondersteunen en complexe problemen op te lossen is de beschikbaarheid van een programmeur nodig.
+Om het ontwikkelen van interactieve 3D omgevingen mogelijk te maken voor niet-programmeurs is de VRInteractions plugin ontwikkeld. De plugin maakt het mogelijk om met een aantal simpele stappen \gls{vr} omgevingen op te zetten en om bestaande omgevingen werkend te krijgen in \gls{vr}.
 
-Met de plugin en beschreven workflow zijn de volgende projecten succesvol afgerond:
+Door het ontwikkelen met een workflow die prioriteit geeft aan vrijheid, experimenten en gebruiksgemak zijn de componenten iteratief ontwikkeld in samenwerking met de niet-programmeurs. Hierdoor is een intuïtieve koppeling gemaakt tussen Blueprints en \gls{vs}.
+
+Op basis van de gemaakte projecten en de taken van een programmeur hierin zijn de volgende componenten ontwikkeld:
 
 \begin{itemize}
-	\item Een fly-trough door een menselijk lichaam
-	\item Een appartement waarvan o.a. het meubilair en de vloer dynamisch aangepast kon worden
-	\item Een demo van een machine uit een fabriek
-	\item Een virtuele omgeving van een tentoonstelling
-	\item Een leeromgeving rond het colosseum
-	\item Een demo omgeving van de VRInteractions plugin
+	\item Een game mode voor een demo waarin de speler kan rondlopen en een voor een fly-through demo
+	\item Een speler klasse per game mode
+	\item Een component die verantwoordelijk is voor de input van de speler
+	\item Een component die verantwoordelijk is voor de camera van de speler
+	\item Een component die events afvuurt als er naar een object gekeken word
+	\item Een HUD die het mogelijk maakt om op basis van de look events informatie te tonen
+	\item Een 3D menu die zijn opties in een cirkel toont
+	\item Een object wat verplaats kan worden door middel van ernaar te kijken.
 \end{itemize}
+
+Door de interactie te beperken tot kijken naar objecten is er voor gezorgd dat alle componenten in de VRInteractions plugin werken op de Oculus, Vive en de GearVR.
+
+Met behulp van de plugin zijn meerdere projecten ontwikkeld door niet-programmeurs wat aantoont dat er succesvol een ontwikkelomgeving gerealiseerd is waarin niet-programmeurs in \gls{ue4} unieke virtual reality ervaring kunnen creëren.
