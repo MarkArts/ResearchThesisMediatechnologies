@@ -34,15 +34,14 @@
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{vmargin}
-\setmarginsrb           { 1.5in}  % left margin
-                        { 0.6in}  % top margin
-                        { 1.0in}  % right margin
-                        { 0.8in}  % bottom margin
-                        {  20pt}  % head height
-                        {0.25in}  % head sep
-                        {   9pt}  % foot height
-                        { 0.3in}  % foot sep
+
+\usepackage{geometry}
+\geometry{includehead,includefoot,
+  left=1.5in,right=1.0in,
+  top=0.6in,bottom=0.8in,
+  headheight=20pt,headsep=0.25in,
+  footskip=0.3in}
+
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -103,6 +102,8 @@
 \usepackage{epstopdf}
 \usepackage{booktabs}
 \usepackage{rotating}
+\usepackage{pdfpages}
+\usepackage{pdfpages}
 \usepackage{listings}
 \usepackage{lstpatch}
 \usepackage[autostyle]{csquotes}  
