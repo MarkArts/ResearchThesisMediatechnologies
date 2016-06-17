@@ -260,8 +260,6 @@
       \smallskip
       {\LARGE \authornames \par}
       \vfill
-      {\large Een scriptie geschreven voor het halen van de \par}
-      {\large bachelor of science Mediatechnologie \par}
       \bigskip
       \bigskip
       {\large voor \par}
