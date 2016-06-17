@@ -105,6 +105,7 @@
 \usepackage{rotating}
 \usepackage{listings}
 \usepackage{lstpatch}
+\usepackage[autostyle]{csquotes}  
 \usepackage{color}
 \usepackage{tikz}
 \usepackage{todonotes}

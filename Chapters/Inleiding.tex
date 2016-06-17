@@ -4,17 +4,17 @@
 
 In een periode van 18 weken zijn er een reeks van basis componenten voor de \gls{ue4} ontwikkeld met als doel niet-programmeurs efficiënt interactie aan \gls{vr} demo’s te laten toevoegen.
 
-De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica eenvoudig uit te drukken (zie hoofdstuk~\ref{ch:visualscripting}). Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica toe te voegen zonder dat een programmeur nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit \cite{Cutumisu200732}.
+De \gls{ue4} is gebruikt omdat deze een uitgebreid \gls{vs} systeem heeft die het makkelijk maakt om simpele logica eenvoudig uit te drukken (zie hoofdstuk~\ref{ch:visualscripting}). Het \gls{vs} systeem maakt het mogelijk voor niet-programmeurs om simpele logica toe te voegen zonder dat een programmeur nodig is. Dit zorgt voor een hogere productiviteit en kwaliteit zoals beschreven door \citet{Cutumisu200732}.
 
-\todo{quote source}
+\blockquote{
+	The traditional approach to implementing interactions between a player character (PC) and objects in computer games is to write scripts in a procedural scripting language. These scripts are usually so complex that they must be written by a computer programmer rather than by the author of the game story. This interruption in the game story authoring process has two distinct disadvantages: it increases the cost of game production and it introduces a disconnect between the author’s intentions and the interactions produced from the programmer’s written scripts.
+}
 
 \section{Probleemstelling}
 
 Momenteel is het toevoegen van interactieve elementen in \gls{vr} een intensieve programmeer taak omdat standaard nog geen interactie aanwezig is, en elke hardware weer andere input gebruikt. Het is daardoor lastig om de geprogrammeerde logica te hergebruiken in een ander project. Hierdoor is er altijd een programmeur nodig om de gewenste functionaliteit toe te voegen of aan te passen. 
 
 In gameontwikkeling zijn er de afgelopen jaren steeds meer technieken ontwikkeld om van de afhankelijkheid van programmeurs te verminderen \cite{Cutumisu200732, ambientbehav}. De oplossing van \gls{ue4} is het gebruik van Blueprints om interactie in een spel te programmeren. Maar op het moment van schrijven is er nog geen koppeling tussen Blueprints en \gls{vr} interactie.
-
-\todo{zo hebben x scriptiease gemaakt en b bla geprobeerd}
 
 \section{Doelstelling}
 
@@ -54,6 +54,8 @@ De hoofdvraag van deze scriptie is: Hoe realiseren we een ontwikkelomgeving waar
 
 \subsubsection{Hoe kan er een koppeling met Virtual Scripting gemaakt worden die intuïtief is voor niet programmeurs?}
 
+Om een beter beeld te krijgen van het huidige \gls{vs} landschap word er eerst deskresearch gedaan \cite{Cutumisu200732, ambientbehav, PANE2001237}.
+
 De vrijheid en mogelijkheden die de niet-programmeur krijgen, oftewel de abstractie van de componenten, zijn afhankelijk van de bestaande intuïtie van programmeren. Als een gebruiker bijvoorbeeld snapt hoe de “als dit dan dat” constructie werkt kan er meer vrijheid in de componenten gecreëerd worden. Maar als de gebruiker deze intuïtie niet heeft zal meer vrijheid, abstractie, alleen voor onduidelijkheid zorgen.
 
 In de eerste plaats zal er onderzocht moeten worden wat de huidige kennis is van de niet-programmeurs. Dit kan door middel van interviews.
@@ -63,6 +65,9 @@ Vervolgens zal er onderzocht moeten worden wat een haalbare moeilijkheidsgraad i
 Als er sprake is van toegevoegde waarde van een extra training dan zal deze parallel aan het project gegeven worden en iteratief ontwikkeld worden.
 
 \subsubsection{Welke componenten zullen gemaakt moeten worden?}
+
+Om een beter beeld te krijgen van het huidige \gls{vr} landschap word er eerst deskresearch gedaan \cite{Bauer2015,7131757,Mine:2003:TVR:769953.769955,Pausch:1996:DAF:237170.237257,Mine:2003:TVR:769953.769955}
+
 Het onderzoek naar welke componenten gemaakt moeten worden zal beginnen met een onderzoek naar de huidige taken van de programmeur tijdens het maken van een virtuele reality omgeving. Aan de hand hiervan zal er gekeken worden welke taken geautomatiseerd kunnen worden of versimpeld naar \gls{vs}.
 
 Als er een duidelijk beeld is van de benodigde componenten zal er een onderzoek gedaan worden naar bestaande tools die ingezet kunnen worden om de workflow te verbeteren.
